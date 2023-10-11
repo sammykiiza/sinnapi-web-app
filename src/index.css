@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+
+.select-categories__control {
+  @apply rounded-r-none !important;
+}
+.select-location__control {
+  @apply rounded-none !important;
+}
+.select-categories__indicator-separator, .select-location__indicator-separator {
+@apply hidden !important;
+}
+.select-categories__dropdown-indicator svg, .select-location__dropdown-indicator svg {
+  color: #212121 !important;
+}
+.select-categories__menu-list, .select-location__menu-list {
+  @apply text-theme_secondary rounded-md !important;
+}
+.select-categories__option--is-selected, .select-location__option--is-selected {
+  @apply bg-theme_secondary text-white !important;
+}
+.select-location__menu {
+@apply w-[200%] md:w-[120%] lg:w-full !important;
+}
+.select-categories__menu {
+  @apply w-[120%] md:w-full !important;
+}
+
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Conthrax Bold";
+  src: url("/fonts/conthrax/conthrax-sb.ttf");
+}
+
+@font-face {
+  font-family: "Conthrax Light";
+  src: url("/fonts/conthrax/conthrax-light.otf");
+}
+
+@font-face {
+  font-family: "Akidenz-Grotesk-BQ-Light";
+  src: url("/fonts/Akzidenz-Grotesk-BQ-Light_FontYukle/Akzidenz-Grotesk-BQ-Light.ttf");
+}
+
+@font-face {
+  font-family: "Akidenz-Grotesk-BQ-Bold";
+  src: url("/fonts/Akzidenz-Grotesk-BQ-Bold_FontYukle/Akzidenz-Grotesk-BQ-Bold.ttf");
+}
