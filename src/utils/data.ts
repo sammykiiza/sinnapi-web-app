@@ -76,3 +76,20 @@ export const topEventsListings: TopEventsLisitingsCardProps[] = [
     reviews: 22,
   },
 ]
+
+export const vendorCategoriesSelectData = [
+  { value: "wedding-gowns", label: "Wedding Gowns" },
+  { value: "cakes", label: "Cakes" },
+  { value: "venues", label: "Venues" },
+  { value: "music-systems", label: "Music Systems" },
+  { value: "decoration", label: "Decoration" },
+  { value: "jewellers", label: "Jewellers" },
+  { value: "car-hire-services", label: "Car Hire Services" },
+  { value: "catering-services", label: "Catering Services" },
+  { value: "bridal-salons", label: "Bridal Salons" },
+  { value: "suits", label: "Suits" },
+  { value: "photography", label: "Photography" },
+  { value: "make-up-services", label: "Make-Up Services" },
+]
+
+export const ratingSelectDropDown = [{ value: "top-rated", label: "Top Rated" }]

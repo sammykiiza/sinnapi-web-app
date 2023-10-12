@@ -26,6 +26,38 @@
   @apply w-[120%] md:w-full !important;
 }
 
+ul.pagination {
+  @apply flex space-x-2 h-5 text-center items-center my-16;
+}
+
+ul.pagination>li {
+  @apply bg-gray-300 rounded-sm text-lg text-theme_black px-2;
+}
+
+ul.pagination>li:hover {
+  @apply bg-theme_secondary text-white cursor-pointer;
+}
+ul.pagination>li.selected {
+  @apply bg-theme_secondary text-white cursor-pointer;
+}
+.multi-range-slider .bar-left, .multi-range-slider .bar-right {
+  @apply shadow-none bg-gray-300;
+}
+.bar-right {
+  @apply h-1;
+}
+.multi-range-slider .bar-left {
+  @apply p-0;
+}
+
+.multi-range-slider .bar-inner {
+  @apply bg-gray-100;
+}
+.multi-range-slider .thumb::before {
+  @apply border-theme_secondary bg-white shadow-none h-4 w-4 -my-[0.4rem];
+}
+
+
 @tailwind utilities;
 
 
@@ -47,4 +79,14 @@
 @font-face {
   font-family: "Akidenz-Grotesk-BQ-Bold";
   src: url("/fonts/Akzidenz-Grotesk-BQ-Bold_FontYukle/Akzidenz-Grotesk-BQ-Bold.ttf");
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
 }

@@ -7,6 +7,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown"
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons/faCircleInfo"
 import { Link } from "react-router-dom"
 import SideBarMobile from "../sidebars/SideBarMobile"
+import { vendorCategoriesSelectData } from "../../utils/data"
 
 function Header() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -19,21 +20,6 @@ function Header() {
       window.removeEventListener("resize", updateScreenWidth)
     }
   }, [screenWidth])
-  const vendorCategoriesSelectData = [
-    { value: "", label: "Choose Vendor Category" },
-    { value: "wedding-gowns", label: "Wedding Gowns" },
-    { value: "cakes", label: "Cakes" },
-    { value: "venues", label: "Venues" },
-    { value: "music-systems", label: "Music Systems" },
-    { value: "decoration", label: "Decoration" },
-    { value: "jewellers", label: "Jewellers" },
-    { value: "car-hire-services", label: "Car Hire Services" },
-    { value: "catering-services", label: "Catering Services" },
-    { value: "bridal-salons", label: "Bridal Salons" },
-    { value: "suits", label: "Suits" },
-    { value: "photography", label: "Photography" },
-    { value: "make-up-services", label: "Make-Up Services" },
-  ]
   return (
     <div className="h-28 bg-theme_primary">
       <div className=" grid grid-rows-2 grid-cols-12 content-center justify-items-center lg:px-10 max-w-7xl mx-auto">
@@ -41,7 +27,9 @@ function Header() {
           <div className="absolute left-0 m-2 xl:hidden">
             <SideBarMobile />
           </div>
-          <img src={logo} alt="sinnapi" />
+          <Link to={"/"}>
+            <img src={logo} alt="sinnapi" />
+          </Link>
         </div>
         <div className="col-span-12 lg:col-span-9 row-start-2 lg:row-start-auto justify-self-center self-center px-10 lg:px-0 mx-auto lg:ml-10 flex flex-row w-full justify-center">
           <ReactSelect

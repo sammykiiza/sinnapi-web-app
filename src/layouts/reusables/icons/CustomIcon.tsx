@@ -7,7 +7,7 @@ function CustomIcon({
   className,
 }: {
   type: icons.IconDefinition
-  className: string
+  className?: string
 }) {
   return (
     <FontAwesomeIcon
