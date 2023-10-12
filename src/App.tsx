@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import {
   CustomerRoutes,
   GeneralRoutes,
@@ -10,30 +10,28 @@ import NoMatch from "./features/error-components/NoMatch"
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={GeneralRoutes[0].path} element={indexRoute.component()}>
-          {GeneralRoutes.map((route, key) => (
-            <Route
-              index={route.path === "/" ? true : false}
-              path={route.path}
-              element={route.component()}
-              key={key}
-            />
-          ))}
-        </Route>
-        <Route path="/customer" element={<Customer />}>
-          {CustomerRoutes.map((route, key) => (
-            <Route path={route.path} element={route.component()} key={key} />
-          ))}
-        </Route>
-        <Route path="/vendor" element={<Customer />}>
-          {VendorRoutes.map((route, key) => (
-            <Route path={route.path} element={route.component()} key={key} />
-          ))}
-        </Route>
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path={GeneralRoutes[0].path} element={indexRoute.component()}>
+        {GeneralRoutes.map((route, key) => (
+          <Route
+            index={route.path === "/" ? true : false}
+            path={route.path}
+            element={route.component()}
+            key={key}
+          />
+        ))}
+      </Route>
+      <Route path="/customer" element={<Customer />}>
+        {CustomerRoutes.map((route, key) => (
+          <Route path={route.path} element={route.component()} key={key} />
+        ))}
+      </Route>
+      <Route path="/vendor" element={<Customer />}>
+        {VendorRoutes.map((route, key) => (
+          <Route path={route.path} element={route.component()} key={key} />
+        ))}
+      </Route>
+      <Route path="*" element={<NoMatch />} />
+    </Routes>
   )
 }
