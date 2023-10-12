@@ -13,4 +13,8 @@ export const GeneralRoutes = [
     path: "/listing-with-map",
     component: GeneralComponents.VendorListings.ListingWithMap,
   },
+  {
+    path: "/contact-us",
+    component: GeneralComponents.Contact,
+  },
 ]

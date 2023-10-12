@@ -5,7 +5,7 @@ import { Marker } from "react-leaflet/Marker"
 import { Popup } from "react-leaflet/Popup"
 import "leaflet/dist/leaflet.css"
 
-function Map({ height }: { height: number }) {
+function Map({ height, className }: { height: number; className?: string }) {
   return (
     <div>
       <MapContainer
@@ -13,6 +13,7 @@ function Map({ height }: { height: number }) {
         zoom={13}
         scrollWheelZoom={false}
         style={{ height: `${height}px` }}
+        className={className}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

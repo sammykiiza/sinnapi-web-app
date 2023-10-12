@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import TopEventsListingsCard from "../../../layouts/reusables/TopEventsListingsCard"
 import { topEventsListings } from "../../../utils/data"
 
 function TopEventsListings() {
+  const navigate = useNavigate()
   return (
     <div className="bg-[url('/images/home/events-listing/background-top-events-listings.png')] bg-repeat bg-gray-100 flex flex-col gap-y-14 py-10">
       <div className="">
@@ -26,7 +28,10 @@ function TopEventsListings() {
         ))}
       </div>
       <div className="self-center xl:mt-8">
-        <button className="bg-theme_secondary hover:bg-white rounded-full text-xs font-theme_secondary_bold text-white hover:text-theme_secondary p-3 ease-linear duration-100">
+        <button
+          onClick={() => navigate("/listing-with-map")}
+          className="bg-theme_secondary hover:bg-white rounded-full text-xs font-theme_secondary_bold text-white hover:text-theme_secondary p-3 ease-linear duration-100"
+        >
           View More Vendors
         </button>
       </div>

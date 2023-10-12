@@ -67,8 +67,8 @@ function Header() {
             </div>
           </button>
           <Link
-            to={"/"}
-            className="flex flex-row items-center justify-center lg:bg-theme_secondary rounded px-2 space-x-4 text-white"
+            to={"/contact-us"}
+            className="flex flex-row items-center justify-center lg:bg-theme_secondary hover:bg-theme_secondary rounded px-2 space-x-4 text-white"
           >
             <FontAwesomeIcon icon={faCircleInfo} />
             <span className="text-sm hidden lg:inline">Help</span>
