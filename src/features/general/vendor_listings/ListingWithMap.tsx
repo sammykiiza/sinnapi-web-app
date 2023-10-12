@@ -70,6 +70,7 @@ function ListingWithMap() {
       </div>
       <div className="w-full xl:col-span-2">
         <Map
+          key={screenWidth}
           height={
             screenWidth === 2560
               ? screenWidth - 1500

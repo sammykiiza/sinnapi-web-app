@@ -9,7 +9,7 @@ function TopEventsVendorsCard(props: TopEventsVendorsCardProps) {
       <div className="rounded xl:h-52">
         <div className="group">
           <img
-            src={props.imageUrl}
+            src={new URL(`${props.imageUrl}`, import.meta.url).href}
             alt=""
             className="object-cover w-full rounded-t h-40 group-hover:opacity-80 ease-in-out duration-75"
           />
