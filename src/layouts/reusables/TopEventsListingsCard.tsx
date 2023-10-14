@@ -23,7 +23,7 @@ function TopEventsListingsCard(props: TopEventsLisitingsCardProps) {
                 type={"faTag" as unknown as IconDefinition}
                 className="text-white bg-theme_primary transition-all ease-in duration-200 group-hover:bg-theme_secondary rounded-full p-1 text-[0.6rem]"
               />
-              <span className="text-[0.6rem]">UGX(120M-300M)</span>
+              <span className="text-[0.6rem] w-full">UGX(120M-300M)</span>
             </span>
           </div>
           <img

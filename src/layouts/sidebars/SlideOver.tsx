@@ -9,6 +9,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faX } from "@fortawesome/free-solid-svg-icons/faX"
+import logo from "/images/header/logo/sinnapi.png"
 
 function SlideOverContent(props: any) {
   const { onClose, children, title } = props
@@ -58,13 +59,13 @@ function SlideOverContent(props: any) {
                 </button>
               </div>
               <div className="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
-                <div className="px-4 sm:px-6">
+                <div className="px-14 sm:px-16">
                   <h2
                     id="slide-over-heading"
                     className="text-lg font-medium text-gray-900"
                     {...titleProps}
                   >
-                    {title}
+                    <img src={logo} alt="sinnapi" />
                   </h2>
                 </div>
                 <div className="mt-6 relative flex-1 px-4 sm:px-6">

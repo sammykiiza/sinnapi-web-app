@@ -6,14 +6,14 @@ import CustomIcon from "./icons/CustomIcon"
 function TopEventsVendorsCard(props: TopEventsVendorsCardProps) {
   return (
     <Link to={"/"}>
-      <div className="rounded xl:h-52">
-        <div className="group">
+      <div className="rounded">
+        <div className="group flex flex-col">
           <img
             src={new URL(`${props.imageUrl}`, import.meta.url).href}
             alt=""
-            className="object-cover w-full rounded-t h-40 group-hover:opacity-80 ease-in-out duration-75"
+            className="object-cover w-full rounded-t h-44 group-hover:opacity-80 ease-in-out duration-75"
           />
-          <div className="invisible group-hover:visible absolute -mt-20 ml-16 text-white text-xs opacity-80 font-theme_secondary_light bg-theme_primary rounded-full px-2 py-1 ease-in-out duration-75">
+          <div className="invisible group-hover:visible self-center absolute mt-20 text-theme_primary text-xs opacity-80 font-theme_secondary_bold bg-white rounded-full px-2 py-1 ease-in-out duration-75">
             View Details
           </div>
         </div>

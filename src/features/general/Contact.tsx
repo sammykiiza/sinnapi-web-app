@@ -16,7 +16,7 @@ function Contact() {
   }, [screenWidth])
   return (
     <div className="grid grid-rows-2">
-      <Map key={screenWidth} className="md:-z-10" height={400} />
+      <Map key={screenWidth} className="-z-50" height={400} />
       <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-y-0 md:gap-x-8 justify-self-center absolute mt-72 max-w-7xl">
         <div className="bg-theme_primary text-white text-sm space-y-2 rounded-md text-center px-2 py-10">
           <CustomIcon

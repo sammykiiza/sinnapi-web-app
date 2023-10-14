@@ -26,13 +26,13 @@ export const topEventsVendors: TopEventsVendorsCardProps[] = [
     vendorLocation: "Kabale",
     iconName: "faGem" as unknown as IconDefinition,
   },
-  {
-    imageUrl: "/images/home/events-vendors/car-hire-services.jpg",
-    vendorCategory: "Car Hire Services",
-    vendorLocation: "Kampala",
-    iconName: "faCar" as unknown as IconDefinition,
-  },
 ]
+// {
+//   imageUrl: "/images/home/events-vendors/car-hire-services.jpg",
+//   vendorCategory: "Car Hire Services",
+//   vendorLocation: "Kampala",
+//   iconName: "faCar" as unknown as IconDefinition,
+// },
 
 export const topEventsListings: TopEventsLisitingsCardProps[] = [
   {
@@ -67,15 +67,16 @@ export const topEventsListings: TopEventsLisitingsCardProps[] = [
     vendorName: "Emerald Suits",
     reviews: 16,
   },
-  {
-    imageUrl: "/images/home/events-listing/items/cars.jpg",
-    vendorCategory: "Car Hire Services",
-    vendorLocation: "Kampala",
-    iconName: "faCar" as unknown as IconDefinition,
-    vendorName: "V&M Cars",
-    reviews: 22,
-  },
 ]
+
+// {
+//   imageUrl: "/images/home/events-listing/items/cars.jpg",
+//   vendorCategory: "Car Hire Services",
+//   vendorLocation: "Kampala",
+//   iconName: "faCar" as unknown as IconDefinition,
+//   vendorName: "V&M Cars",
+//   reviews: 22,
+// },
 
 export const vendorCategoriesSelectData = [
   { value: "wedding-gowns", label: "Wedding Gowns" },
