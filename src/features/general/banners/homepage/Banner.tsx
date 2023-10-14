@@ -1,9 +1,9 @@
 import React from "react"
-import CategoriesMenu from "./CategoriesMenu"
-import PopularCategories from "./PopularCategories"
-import WelcomeToSinnapi from "./WelcomeToSinnapi"
-import Carousel from "./carousel/Carousel"
-import { slides } from "./carousel/slides"
+import CategoriesMenu from "../../home/CategoriesMenu"
+import PopularCategories from "../../home/PopularCategories"
+import WelcomeToSinnapi from "../../home/WelcomeToSinnapi"
+import Carousel from "../../home/carousel/Carousel"
+import { slides } from "../../home/carousel/slides"
 
 function Banner() {
   return (

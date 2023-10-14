@@ -80,17 +80,17 @@ function Contact() {
         <div className="grid grid-cols-2 w-full px-4 md:px-0 gap-y-2 md:gap-y-0 md:gap-x-4 items-center">
           <input
             placeholder="Full Name"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
           />
           <input
             placeholder="Mobile No."
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
           />
         </div>
         <div className="grid grid-cols-2 w-full px-4 md:px-0 gap-y-2 md:gap-y-0 md:gap-x-4 items-center">
           <input
             placeholder="Email"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
           />
           <div className="col-span-2 md:col-span-1 flex flex-row items-center justify-evenly">
             <span className="text-gray-500 text-sm">Category</span>
@@ -99,7 +99,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="customer-category"
-                  className="h-[0.6rem] checked:accent-theme_secondary"
+                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none"
                   defaultChecked
                   name="contact-category"
                 />
@@ -114,7 +114,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="vendor-category"
-                  className="h-[0.6rem] checked:accent-theme_secondary"
+                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none"
                   defaultChecked
                   name="contact-category"
                 />
@@ -132,7 +132,7 @@ function Contact() {
           <textarea
             placeholder="Your Message"
             rows={8}
-            className="bg-gray-100 w-full p-2 border placeholder:text-xs"
+            className="bg-gray-100 w-full p-2 border placeholder:text-xs focus:outline-none"
           />
         </div>
         <button className="text-white px-3 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm">

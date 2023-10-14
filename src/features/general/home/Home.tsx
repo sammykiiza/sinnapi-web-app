@@ -1,4 +1,4 @@
-import Banner from "./Banner"
+import Banner from "../banners/homepage/Banner"
 import TopEventsListings from "./TopEventsListing"
 import TopEventsVendors from "./TopEventsVendors"
 

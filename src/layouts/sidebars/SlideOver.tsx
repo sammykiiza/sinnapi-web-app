@@ -42,7 +42,7 @@ function SlideOverContent(props: any) {
           exit={{ x: "-100%" }}
           transition={{ ease: "easeInOut", duration: 0.5 }}
         >
-          <FocusScope contain restoreFocus autoFocus>
+          <FocusScope contain restoreFocus>
             <div className="relative w-[60vw] md:w-screen max-w-md">
               <div className="absolute top-0 right-0 -mr-10 p-2 flex sm:-mr-10 -pr-4">
                 <button
