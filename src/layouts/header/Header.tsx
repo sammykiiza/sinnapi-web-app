@@ -85,7 +85,7 @@ function Header() {
             <div
               className={
                 isDropDownOpen
-                  ? "block absolute -right-6 z-10 w-28 origin-top-right rounded bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  ? "block absolute -right-6 z-50 w-28 origin-top-right rounded bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   : "hidden"
               }
               role="menu"
@@ -111,7 +111,7 @@ function Header() {
                 </div>
                 <div className="p-1">
                   <Link
-                    to={"/"}
+                    to={"/vendor-signup"}
                     className="text-gray-700 hover:text-white block px-4 py-2 text-xs hover:bg-theme_secondary rounded"
                     role="menuitem"
                     tabIndex={-1}

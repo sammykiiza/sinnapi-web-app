@@ -9,6 +9,7 @@ export interface SelectBoxProps {
   className?: string
   classNamePrefix?: string
   name?: string
+  container?: boolean
   placeHolderLargeScreen?: string
   placeHolderSmallScreen?: string
 }
@@ -25,7 +26,7 @@ export default function SelectBox(props: SelectBoxProps) {
     }
   }, [screenWidth])
   return (
-    <div>
+    <div className={props.container ? "container" : ""}>
       <ReactSelect
         options={props.data}
         placeholder={

@@ -21,4 +21,8 @@ export const GeneralRoutes = [
     path: "/customer-signup",
     component: GeneralComponents.CustomerSignUp,
   },
+  {
+    path: "/vendor-signup",
+    component: GeneralComponents.VendorSignUp,
+  },
 ]

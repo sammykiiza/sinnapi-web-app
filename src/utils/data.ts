@@ -94,3 +94,8 @@ export const vendorCategoriesSelectData = [
 ]
 
 export const ratingSelectDropDown = [{ value: "top-rated", label: "Top Rated" }]
+
+export const selectBoxCategories = [
+  { value: "photography", label: "Photography" },
+  { value: "decoration", label: "Decoration" },
+]

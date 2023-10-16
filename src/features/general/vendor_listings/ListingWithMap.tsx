@@ -31,14 +31,14 @@ function ListingWithMap() {
               name="listing-filter-select-category"
               placeHolderLargeScreen="Select Category"
               placeHolderSmallScreen="Category"
-              classNamePrefix="select-listing-with-map"
+              classNamePrefix="categories"
             />
             <SelectBox
               data={vendorCategoriesSelectData}
               name="listing-filter-select-location"
               placeHolderLargeScreen="Select Location"
               placeHolderSmallScreen="Location"
-              classNamePrefix="select-listing-with-map"
+              classNamePrefix="location"
             />
             <Slider className="border-none shadow-none" />
           </div>
@@ -71,6 +71,7 @@ function ListingWithMap() {
       <div className="w-full xl:col-span-2">
         <Map
           key={screenWidth}
+          className="z-0"
           height={
             screenWidth === 2560
               ? screenWidth - 1500

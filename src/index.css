@@ -4,20 +4,29 @@
 .select-categories__control {
   @apply rounded-r-none !important;
 }
+.select-categories-vendor-signup__control {
+  @apply bg-gray-100 border-none rounded !important; 
+}
+.select-categories-vendor-signup__placeholder {
+  @apply text-left text-xs text-gray-400 !important;
+}
 .select-location__control {
   @apply rounded-none !important;
 }
-.select-categories__indicator-separator, .select-location__indicator-separator {
+.select-categories__indicator-separator, .select-location__indicator-separator, .select-categories-vendor-signup__indicator-separator {
 @apply hidden !important;
 }
 .select-categories__dropdown-indicator svg, .select-location__dropdown-indicator svg {
-  color: #212121 !important;
+  @apply text-gray-400 !important;
 }
-.select-categories__menu-list, .select-location__menu-list {
+.select-categories__menu-list, .select-location__menu-list, .select-categories-vendor-signup__menu-list {
   @apply text-theme_secondary rounded-md !important;
 }
-.select-categories__option--is-selected, .select-location__option--is-selected {
+.select-categories__option--is-selected, .select-location__option--is-selected, .select-categories-vendor-signup__option--is-selected {
   @apply bg-theme_secondary text-white !important;
+}
+.select-categories-vendor-signup__menu {
+  @apply w-full !important;
 }
 .select-location__menu {
 @apply w-[150%] md:w-[120%] lg:w-full !important;

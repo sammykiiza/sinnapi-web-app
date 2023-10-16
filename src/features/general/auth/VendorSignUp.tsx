@@ -1,0 +1,97 @@
+import { Link } from "react-router-dom"
+import Banner from "../banners/other-pages/Banner"
+import SelectBox from "../../../layouts/reusables/SelectBox"
+import { selectBoxCategories } from "../../../utils/data"
+
+function VendorSignUp() {
+  return (
+    <div className="grid grid-rows-[repeat(auto-fill,minmax(300px,1fr))]">
+      <div className="col-span-1 row-span-1">
+        <Banner pageTitle="Vendor Sign Up" />
+      </div>
+      <form className="grid grid-cols-2 gap-y-4 pb-14 text-center justify-items-center max-w-7xl mx-auto">
+        <div className="col-span-2 flex flex-col">
+          <h1 className="px-4 text-theme_secondary font-medium text-xl">
+            Register Vendor Account Here
+          </h1>
+          <h3 className="text-gray-400 text-sm text-center">
+            Already have an account?{" "}
+            <Link to={"/login"} className="text-theme_secondary">
+              Log in
+            </Link>
+          </h3>
+        </div>
+        <div className="col-span-2 space-y-4 md:space-x-4">
+          <input
+            placeholder="Full Name"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+          <input
+            placeholder="Email"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+        </div>
+        <div className="col-span-2 space-y-4 md:space-x-4">
+          <input
+            placeholder="Phone Number"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+          <input
+            placeholder="Company Name"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+        </div>
+        <div className="col-span-2 space-y-4 md:space-y-0 md:space-x-4 md:flex md:w-full">
+          <input
+            placeholder="Company Address"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+          <div className="col-span-2 md:col-span-1 w-full">
+            <SelectBox
+              data={selectBoxCategories}
+              classNamePrefix="categories-vendor-signup"
+              placeHolderLargeScreen="Category"
+              placeHolderSmallScreen="Category"
+              container
+            />
+          </div>
+        </div>
+        <div className="col-span-2 space-y-4 md:space-x-4">
+          <input
+            placeholder="Password"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+          <input
+            placeholder="Confirm Password"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+          />
+        </div>
+        <div className="col-span-2 px-4 flex justify-center font-theme_secondary_light text-theme_black text-sm">
+          <p>
+            By Clicking 'Sign Up', You agree to Sinnapi's{" "}
+            <Link
+              to={"/"}
+              className="hover:text-theme_primary text-theme_secondary"
+            >
+              {" "}
+              Privacy Policy{" "}
+            </Link>{" "}
+            and{" "}
+            <Link
+              to={"/"}
+              className="hover:text-theme_primary text-theme_secondary"
+            >
+              {" "}
+              Terms of Use
+            </Link>
+          </p>
+        </div>
+        <button className="col-span-2 text-white px-20 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm">
+          Sign up
+        </button>
+      </form>
+    </div>
+  )
+}
+
+export default VendorSignUp
