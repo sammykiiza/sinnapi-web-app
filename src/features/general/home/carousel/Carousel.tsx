@@ -33,8 +33,10 @@ export default function Carousel({
 
   return (
     <div className="overflow-hidden relative xl:h-96 rounded-none xl:rounded-md">
-      <div className={`flex transition-all ease-out duration-500`}>
-        <div className="absolute top-10 md:top-52 lg:top-64 xl:top-28 md:mx-28 lg:mx-64 xl:mx-24 text-white px-5 text-3xl text-center">
+      <div
+        className={`flex justify-center items-center transition-all ease-out duration-500`}
+      >
+        <div className="absolute xl:mb-44 text-white px-5 text-3xl text-center">
           <div>
             <h1>{slides[current].headerText}</h1>
           </div>

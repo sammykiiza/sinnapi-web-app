@@ -25,7 +25,7 @@ function Footer() {
             </button>
           </div>
         </div>
-        <div className="col-span-1 md:col-span-2">
+        <div className="hidden md:block col-span-1 md:col-span-2">
           <h3 className="font-theme_secondary_bold">Categories</h3>
           <ul className="text-gray-400 ml-4 mt-4 space-y-3 text-sm list-image-[url('/images/footer/chevron-right-solid.svg')]">
             <li className="hover:text-theme_secondary">
@@ -48,7 +48,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-1 md:col-span-2">
+        <div className="hidden md:block col-span-1 md:col-span-2">
           <h3 className="font-theme_secondary_bold">Locations</h3>
           <ul className="text-gray-400 ml-4 mt-4 space-y-3 text-sm list-image-[url('/images/footer/chevron-right-solid.svg')]">
             <li className="hover:text-theme_secondary">
@@ -71,7 +71,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="font-theme_secondary_light col-span-1 md:col-span-2">
+        <div className="font-theme_secondary_light col-span-1 md:col-span-2 md:max-lg:px-4">
           <h3 className="font-theme_secondary_bold">Contact Us</h3>
           <div className="text-gray-400 text-sm">
             <p>TechBuzz Hub</p>

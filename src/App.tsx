@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import {
   CustomerRoutes,
   GeneralRoutes,
@@ -7,8 +7,18 @@ import {
 } from "./layouts/routes"
 import Customer from "./features/customer/Customer"
 import NoMatch from "./features/error-components/NoMatch"
+import { useEffect } from "react"
 
 export default function App() {
+  var pathName = useLocation().pathname
+  useEffect(() => {
+    if (pathName === "/") {
+      pathName = "Home"
+    } else if (pathName !== "Home") {
+      pathName = pathName.slice(1)
+    }
+    document.title = `Sinnapi | ${pathName}`
+  }, [pathName])
   return (
     <Routes>
       <Route path={GeneralRoutes[0].path} element={indexRoute.component()}>

@@ -12,9 +12,7 @@ function SideBarMobile() {
   return (
     <Fragment>
       <FontAwesomeIcon
-        className={
-          isOpen ? "hidden text-white text-xl" : "block text-white text-xl"
-        }
+        className={isOpen ? "hidden" : "block text-white text-base"}
         icon={faBars}
         onClick={() => setIsOpen(true)}
       />
