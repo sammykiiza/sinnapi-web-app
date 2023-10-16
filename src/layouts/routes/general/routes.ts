@@ -17,4 +17,8 @@ export const GeneralRoutes = [
     path: "/login",
     component: GeneralComponents.Login,
   },
+  {
+    path: "/customer-signup",
+    component: GeneralComponents.CustomerSignUp,
+  },
 ]

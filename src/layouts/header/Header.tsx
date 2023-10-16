@@ -26,13 +26,17 @@ function Header() {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false)
   return (
     <div className="bg-theme_primary">
-      <div className="grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center xl:py-4 max-w-5xl mx-auto">
-        <div className=" xl:col-start-auto lg:row-start-1 col-span-2 md:col-span-1 self-center flex flex-row justify-between items-center">
+      <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center xl:py-4 max-w-6xl mx-auto">
+        <div className="xl:col-start-auto lg:row-start-1 col-span-2 md:col-span-1 self-center flex flex-row justify-between items-center">
           <div className="xl:hidden">
             <SideBarMobile />
           </div>
           <Link to={"/"}>
-            <img src={logo} alt="sinnapi" />
+            <img
+              src={logo}
+              alt="sinnapi"
+              className="aspect-square lg:aspect-auto"
+            />
           </Link>
         </div>
         <div className="col-span-12 xl:col-span-9 row-start-2 xl:row-start-auto justify-self-center mb-2 xl:mb-0 flex flex-row w-full justify-center">
@@ -62,19 +66,20 @@ function Header() {
             </button>
           </div>
         </div>
-        <div className="col-start-10 xl:col-start-auto justify-self-center w-full flex flex-row lg:space-x-4 ml-8 md:max-lg:ml-52">
+        {/* md:max-lg:ml-56 lg:max-xl:ml-24 */}
+        <div className="col-start-12 justify-self-end flex flex-row lg:space-x-2">
           <div className="relative">
             <button
               id="menu-button"
               aria-expanded="false"
               aria-haspopup="true"
               onClick={() => setIsDropDownOpen(!isDropDownOpen)}
-              className="flex flex-row space-x-3 items-center lg:bg-theme_secondary rounded py-2 px-2 text-white"
+              className="flex flex-row space-x-2 items-center lg:bg-theme_secondary rounded py-2 px-2 text-white"
             >
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} className="text-xs" />
               <div className="hidden lg:flex flex-row items-center space-x-1">
                 <span className="text-sm">Account</span>
-                <FontAwesomeIcon icon={faChevronDown} className="text-sm" />
+                <FontAwesomeIcon icon={faChevronDown} className="text-xs" />
               </div>
             </button>
             <div
@@ -122,7 +127,7 @@ function Header() {
                 </div>
                 <div className="p-1">
                   <Link
-                    to={"/"}
+                    to={"/customer-signup"}
                     className="text-gray-700 hover:text-white block px-4 py-2 text-xs hover:bg-theme_secondary rounded"
                     role="menuitem"
                     tabIndex={-1}
@@ -152,10 +157,10 @@ function Header() {
           </div>
           <Link
             to={"/contact-us"}
-            className="flex flex-row items-center justify-center lg:bg-theme_secondary hover:bg-theme_secondary rounded px-2 space-x-4 text-white"
+            className="flex flex-row items-center justify-center lg:bg-theme_secondary hover:bg-theme_secondary rounded px-2 space-x-1 text-white"
           >
             <FontAwesomeIcon icon={faCircleInfo} />
-            <span className="text-sm hidden lg:inline">Help</span>
+            <span className="text-xs hidden lg:inline">Help</span>
           </Link>
         </div>
       </div>

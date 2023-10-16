@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Banner from "./banners/other-pages/Banner"
+import Banner from "../banners/other-pages/Banner"
 
 function Login() {
   return (
@@ -7,7 +7,7 @@ function Login() {
       <div className="col-span-1">
         <Banner pageTitle="Login" />
       </div>
-      <div className="grid grid-cols-1 gap-y-4 -mt-8 pb-14 text-center justify-items-center max-w-7xl mx-auto">
+      <form className="grid grid-cols-1 gap-y-4 -mt-8 pb-14 text-center justify-items-center max-w-7xl mx-auto">
         <h1 className="text-theme_secondary font-medium text-xl">
           Log into your account
         </h1>
@@ -50,7 +50,7 @@ function Login() {
             Join now
           </Link>
         </div>
-      </div>
+      </form>
     </div>
   )
 }

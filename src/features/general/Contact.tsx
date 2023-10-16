@@ -70,7 +70,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="space-y-4 -mt-16 md:mt-4 mb-16 items-center grid grid-cols-1 justify-items-center max-w-7xl mx-auto">
+      <form className="space-y-4 -mt-16 md:mt-4 mb-16 items-center grid grid-cols-1 justify-items-center max-w-7xl mx-auto">
         <h1 className="text-theme_secondary text-center text-2xl">
           Feel Free To Contact Us
         </h1>
@@ -99,7 +99,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="customer-category"
-                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none"
+                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none checked:text-white"
                   defaultChecked
                   name="contact-category"
                 />
@@ -138,7 +138,7 @@ function Contact() {
         <button className="text-white px-3 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm">
           Send Message
         </button>
-      </div>
+      </form>
     </div>
   )
 }

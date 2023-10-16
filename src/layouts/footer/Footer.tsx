@@ -11,16 +11,16 @@ function Footer() {
   return (
     <div className="bg-theme_black text-white font-theme_secondary_light md:h-96">
       <div className="grid grid-cols-1 md:grid-cols-9 max-md:gap-y-10 max-lg:px-8 max-lg:py-6 content-center md:justify-items-center max-w-7xl mx-auto h-full">
-        <div className="col-span-1 max-md:w-32">
+        <div className="col-span-1 mx-1 md:max-lg:w-32">
           <div className="">
-            <img src={logo} alt="sinnapi" />
+            <img src={logo} alt="sinnapi" className="aspect-auto" />
           </div>
-          <div className="text-xs">
+          <div className="text-xs px-3">
             At Sinnapi, our purpose is to help people find great online network
             connecting event suppliers
           </div>
-          <div className="mt-8">
-            <button className="text-white text-sm font-theme_secondary_bold bg-theme_secondary hover:bg-theme_primary rounded-sm px-3 py-2">
+          <div className="mt-3">
+            <button className="text-white text-sm font-theme_secondary_bold bg-theme_secondary hover:bg-theme_primary rounded-md px-3 py-2">
               Know More
             </button>
           </div>
@@ -123,11 +123,11 @@ function Footer() {
             <form className="flex flex-col justify-start space-y-2">
               <input
                 placeholder="Enter Email Address"
-                className="bg-white text-theme_black text-sm rounded-sm p-2 placeholder:text-xs placeholder:text-theme_black w-44 focus:ring-0 focus:outline-0"
+                className="bg-white text-theme_black text-sm rounded-md p-2 placeholder:text-xs placeholder:text-theme_black w-44 focus:ring-0 focus:outline-0"
               />
               <button
                 type="submit"
-                className="text-white text-xs font-theme_secondary_bold bg-theme_secondary hover:bg-theme_primary w-24 py-2 rounded-sm"
+                className="text-white text-xs font-theme_secondary_bold bg-theme_secondary hover:bg-theme_primary w-24 py-2 rounded-md"
               >
                 Subscribe
               </button>
