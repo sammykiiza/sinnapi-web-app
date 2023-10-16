@@ -26,26 +26,32 @@ function Header() {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false)
   return (
     <div className="bg-theme_primary">
-      <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center xl:py-4 max-w-6xl mx-auto">
-        <div className="xl:col-start-auto lg:row-start-1 col-span-2 md:col-span-1 self-center flex flex-row justify-between items-center">
+      <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center max-w-6xl mx-auto">
+        <div className="pl-2 xl:pl-0 lg:row-start-1 col-span-2 md:col-span-1 flex flex-row justify-between items-center">
           <div className="xl:hidden">
             <SideBarMobile />
           </div>
           <Link to={"/"} className="">
-            <img src={logo} alt="sinnapi" className="aspect-auto" />
+            <img
+              src={logo}
+              alt="sinnapi"
+              className="max-w-[150%] xl:max-w-[110%]"
+            />
           </Link>
         </div>
-        <div className="col-span-12 xl:col-span-9 row-start-2 xl:row-start-auto justify-self-center mb-2 xl:mb-0 flex flex-row w-full justify-center">
-          <ReactSelect
-            options={vendorCategoriesSelectData}
-            placeholder={
-              screenWidth <= 1024 ? "Category" : "Choose Vendor Category"
-            }
-            isSearchable={true}
-            className={"w-full text-xs text-gray-300"}
-            classNamePrefix={"select-categories"}
-            name="vendor-category"
-          />
+        <div className="col-span-12 xl:col-start-2 xl:col-span-9 row-start-2 xl:row-start-1 xl:justify-self-center mb-2 mx-auto xl:mb-0 flex flex-row w-full">
+          <div className="w-full">
+            <ReactSelect
+              options={vendorCategoriesSelectData}
+              placeholder={
+                screenWidth <= 1024 ? "Category" : "Choose Vendor Category"
+              }
+              isSearchable={true}
+              className={"w-full text-xs text-gray-300"}
+              classNamePrefix={"select-categories"}
+              name="vendor-category"
+            />
+          </div>
           <div className="flex flex-row w-full">
             <ReactSelect
               options={vendorCategoriesSelectData}
@@ -53,16 +59,15 @@ function Header() {
                 screenWidth <= 1024 ? "Location" : "Choose Vendor Location"
               }
               isSearchable={true}
-              className={"w-full xl:w-[70%] text-xs text-gray-300"}
+              className={"w-full text-xs text-gray-300"}
               classNamePrefix={"select-location"}
               name="location"
             />
-            <button className="bg-theme_secondary text-xs xl:text-sm text-white rounded-r px-4 font-semibold font-theme_secondary_light">
+            <button className="bg-theme_secondary text-xs xl:text-sm text-white rounded-r px-4 whitespace-nowrap font-semibold font-theme_secondary_light">
               Search Now
             </button>
           </div>
         </div>
-        {/* md:max-lg:ml-56 lg:max-xl:ml-24 */}
         <div className="col-start-12 justify-self-end flex flex-row lg:space-x-2">
           <div className="relative">
             <button

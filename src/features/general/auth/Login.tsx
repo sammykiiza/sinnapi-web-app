@@ -14,13 +14,13 @@ function Login() {
         <div>
           <input
             placeholder="Email"
-            className="bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div>
           <input
             placeholder="Password"
-            className="bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <Link

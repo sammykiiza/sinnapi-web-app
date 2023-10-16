@@ -22,27 +22,27 @@ function CustomerSignUp() {
         <div className="col-span-2 space-y-4 md:space-x-4">
           <input
             placeholder="Full Name"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <input
             placeholder="Email"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div className="col-span-2 space-y-4 md:space-x-4">
           <input
             placeholder="Phone Number"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <input
             placeholder="Password"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div className="col-span-2">
           <input
             placeholder="Confirm Password"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div className="col-span-2 px-4 flex justify-center font-theme_secondary_light text-theme_black text-sm">

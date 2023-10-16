@@ -80,17 +80,17 @@ function Contact() {
         <div className="grid grid-cols-2 w-full px-4 md:px-0 gap-y-2 md:gap-y-0 md:gap-x-4 items-center">
           <input
             placeholder="Full Name"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <input
             placeholder="Mobile No."
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div className="grid grid-cols-2 w-full px-4 md:px-0 gap-y-2 md:gap-y-0 md:gap-x-4 items-center">
           <input
             placeholder="Email"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <div className="col-span-2 md:col-span-1 flex flex-row items-center justify-evenly">
             <span className="text-gray-500 text-sm">Category</span>
@@ -132,7 +132,7 @@ function Contact() {
           <textarea
             placeholder="Your Message"
             rows={8}
-            className="bg-gray-100 w-full p-2 border placeholder:text-xs focus:outline-none"
+            className="bg-gray-100 w-full p-2 border-gray-300 placeholder:text-xs focus:outline-none  focus:ring-0 focus:border-gray-300"
           />
         </div>
         <button className="text-white px-3 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm">

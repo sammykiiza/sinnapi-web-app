@@ -26,27 +26,27 @@ function VendorSignUp() {
         <div className="col-span-2 space-y-4 md:space-x-4">
           <input
             placeholder="Full Name"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <input
             placeholder="Email"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
         </div>
         <div className="col-span-2 space-y-4 md:space-x-4">
           <input
             placeholder="Phone Number"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none focus:ring-0 focus:border-gray-300"
           />
           <input
             placeholder="Company Name"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none"
           />
         </div>
         <div className="col-span-2 space-y-4 md:space-y-0 md:space-x-4 md:flex md:w-full">
           <input
             placeholder="Company Address"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none"
           />
           <div className="col-span-2 md:col-span-1 w-full">
             <SelectBox
@@ -61,14 +61,14 @@ function VendorSignUp() {
         <div className="col-span-2 space-y-4 md:space-x-4">
           <input
             placeholder="Password"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none"
           />
           <input
             placeholder="Confirm Password"
-            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
+            className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border-gray-300 placeholder:text-xs focus:outline-none"
           />
         </div>
-        <div className="col-span-2 justify-self-start font-theme_secondary_light flex flex-row px-4 md:space-x-8 items-center justify-stretch">
+        <div className="col-span-2 justify-self-center md:justify-self-start font-theme_secondary_light flex flex-row px-4 space-x-2 md:space-x-8 items-center justify-stretch">
           <span className="text-theme_black text-sm">
             Subscription Payment:
           </span>
@@ -83,7 +83,7 @@ function VendorSignUp() {
                 <img src={airtel} alt="airtel" className="h-10" />
               </label>
             </div>
-            <div className="space-x-2 md:space-x-4 flex">
+            <div className="space-x-4 flex">
               <input
                 type="radio"
                 id="vendor-payment-mtn"

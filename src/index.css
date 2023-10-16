@@ -5,7 +5,7 @@
   @apply rounded-r-none !important;
 }
 .select-categories-vendor-signup__control {
-  @apply bg-gray-100 border-none rounded !important; 
+  @apply bg-gray-100 border-gray-300 rounded !important; 
 }
 .select-categories-vendor-signup__placeholder {
   @apply text-left text-xs text-gray-400 !important;
