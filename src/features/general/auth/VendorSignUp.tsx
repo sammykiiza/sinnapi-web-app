@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import Banner from "../banners/other-pages/Banner"
 import SelectBox from "../../../layouts/reusables/SelectBox"
 import { selectBoxCategories } from "../../../utils/data"
+import airtel from "/images/general/auth/vendor-signup/Airtel.png"
+import mtn from "/images/general/auth/vendor-signup/MTN.png"
 
 function VendorSignUp() {
   return (
@@ -65,6 +67,36 @@ function VendorSignUp() {
             placeholder="Confirm Password"
             className="col-span-2 md:col-span-1 bg-gray-100 h-10 rounded px-4 content-center border placeholder:text-xs focus:outline-none"
           />
+        </div>
+        <div className="col-span-2 justify-self-start font-theme_secondary_light flex flex-row px-4 md:space-x-8 items-center justify-stretch">
+          <span className="text-theme_black text-sm">
+            Subscription Payment:
+          </span>
+          <div className="space-x-4 flex">
+            <div className="flex">
+              <input
+                type="radio"
+                id="vendor-payment-airtel"
+                name="vendor-signup-airtel"
+              />
+              <label htmlFor="vendor-payment-airtel">
+                <img src={airtel} alt="airtel" className="h-10" />
+              </label>
+            </div>
+            <div className="space-x-2 md:space-x-4 flex">
+              <input
+                type="radio"
+                id="vendor-payment-mtn"
+                name="vendor-signup-mtn"
+              />
+              <label
+                htmlFor="vendor-payment-mtn"
+                className="text-gray-500 text-sm"
+              >
+                <img src={mtn} alt="mtn" className="h-10" />
+              </label>
+            </div>
+          </div>
         </div>
         <div className="col-span-2 px-4 flex justify-center font-theme_secondary_light text-theme_black text-sm">
           <p>

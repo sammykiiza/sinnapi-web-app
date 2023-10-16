@@ -31,12 +31,8 @@ function Header() {
           <div className="xl:hidden">
             <SideBarMobile />
           </div>
-          <Link to={"/"}>
-            <img
-              src={logo}
-              alt="sinnapi"
-              className="aspect-square lg:aspect-auto"
-            />
+          <Link to={"/"} className="">
+            <img src={logo} alt="sinnapi" className="aspect-auto" />
           </Link>
         </div>
         <div className="col-span-12 xl:col-span-9 row-start-2 xl:row-start-auto justify-self-center mb-2 xl:mb-0 flex flex-row w-full justify-center">

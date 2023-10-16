@@ -14,7 +14,7 @@ function TopEventsListings() {
           Discover the Best Overall Event Listings
         </p>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 content-center justify-items-center px-2 gap-x-2 gap-y-2 md:gap-y-2 md:px-4 xl:px-16 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 content-center justify-items-center px-2 gap-x-2 gap-y-2 md:gap-y-2 md:px-4 xl:px-16 w-full max-w-7xl mx-auto">
         {topEventsListings.map((listing, i) => (
           <TopEventsListingsCard
             imageUrl={listing.imageUrl}

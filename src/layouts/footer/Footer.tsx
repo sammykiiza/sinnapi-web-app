@@ -11,11 +11,11 @@ function Footer() {
   return (
     <div className="bg-theme_black text-white font-theme_secondary_light md:h-96">
       <div className="grid grid-cols-1 md:grid-cols-9 max-md:gap-y-10 max-lg:px-8 max-lg:py-6 content-center md:justify-items-center max-w-7xl mx-auto h-full">
-        <div className="col-span-1 mx-1 md:max-lg:w-32">
+        <div className="col-span-1 md:max-lg:px-3 lg:max-xl:pl-3 w-32 md:max-lg:w-36 lg:w-auto">
           <div className="">
-            <img src={logo} alt="sinnapi" className="aspect-auto" />
+            <img src={logo} alt="sinnapi" />
           </div>
-          <div className="text-xs px-3">
+          <div className="text-xs">
             At Sinnapi, our purpose is to help people find great online network
             connecting event suppliers
           </div>

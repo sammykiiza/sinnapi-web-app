@@ -26,6 +26,12 @@ export const topEventsVendors: TopEventsVendorsCardProps[] = [
     vendorLocation: "Kabale",
     iconName: "faGem" as unknown as IconDefinition,
   },
+  {
+    imageUrl: "/images/home/events-vendors/car-hire-services.jpg",
+    vendorCategory: "Car Hire Services",
+    vendorLocation: "Kampala",
+    iconName: "faCar" as unknown as IconDefinition,
+  },
 ]
 // {
 //   imageUrl: "/images/home/events-vendors/car-hire-services.jpg",
@@ -66,6 +72,14 @@ export const topEventsListings: TopEventsLisitingsCardProps[] = [
     iconName: "faGem" as unknown as IconDefinition,
     vendorName: "Emerald Suits",
     reviews: 16,
+  },
+  {
+    imageUrl: "/images/home/events-listing/items/cars.jpg",
+    vendorCategory: "Car Hire Services",
+    vendorLocation: "Kampala",
+    iconName: "faCar" as unknown as IconDefinition,
+    vendorName: "V&M Cars",
+    reviews: 22,
   },
 ]
 
