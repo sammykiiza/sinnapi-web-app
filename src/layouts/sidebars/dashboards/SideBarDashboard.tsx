@@ -5,7 +5,7 @@ import CustomIcon from "../../reusables/icons/CustomIcon"
 
 function SideBarDashboard() {
   return (
-    <div className="w-60 space-y-4 flex flex-col justify-center items-center">
+    <div className="w-full lg:w-60 space-y-4 flex flex-col items-center">
       <div className="space-y-2">
         <div className="w-20 mx-auto">
           <img
@@ -18,7 +18,7 @@ function SideBarDashboard() {
           Kato Charles
         </div>
       </div>
-      <div className="shadow-lg bg-white p-8 rounded-md flex flex-col space-y-4">
+      <div className="lg:shadow-lg bg-white p-8 rounded-md flex flex-col space-y-4">
         <div>
           <Link to={"/customer"} className="flex flex-row space-x-3">
             <div>

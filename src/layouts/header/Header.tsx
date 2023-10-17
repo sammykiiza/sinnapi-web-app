@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown"
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons/faCircleInfo"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import SideBarMobile from "../sidebars/SideBarMobile"
 import { vendorCategoriesSelectData } from "../../utils/data"
 import CustomIcon from "../reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import SideBarDashboardMobile from "../sidebars/dashboards/SideBarDashboardMobile"
 
 function Header() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -24,12 +25,22 @@ function Header() {
   }, [screenWidth])
 
   const [isDropDownOpen, setIsDropDownOpen] = useState(false)
+  const location = useLocation().pathname
+  const checkDashboardPath = (): boolean => {
+    return location.includes("/customer") || location.includes("/vendor")
+  }
   return (
-    <div className="bg-theme_primary">
+    <div className="bg-theme_primary py-4">
       <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center max-w-6xl mx-auto">
         <div className="pl-2 xl:pl-0 lg:row-start-1 col-span-2 md:col-span-1 flex flex-row justify-between items-center">
-          <div className="xl:hidden">
-            <SideBarMobile />
+          <div
+            className={checkDashboardPath() ? "lg:hidden" : "" + "xl:hidden"}
+          >
+            {checkDashboardPath() ? (
+              <SideBarDashboardMobile />
+            ) : (
+              <SideBarMobile />
+            )}
           </div>
           <Link to={"/"} className="">
             <img

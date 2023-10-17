@@ -12,7 +12,7 @@ import { faX } from "@fortawesome/free-solid-svg-icons/faX"
 import logo from "/images/header/logo/sinnapi.png"
 
 function SlideOverContent(props: any) {
-  const { onClose, children, title } = props
+  const { onClose, children, title, dashboard } = props
 
   const ref = useRef(null)
   const { overlayProps } = useOverlay(props, ref)
@@ -44,7 +44,13 @@ function SlideOverContent(props: any) {
           transition={{ ease: "easeInOut", duration: 0.5 }}
         >
           <FocusScope contain restoreFocus>
-            <div className="relative w-[60vw] md:w-screen max-w-md">
+            <div
+              className={
+                dashboard
+                  ? `w-30vw`
+                  : `w-60vw` + ` relative md:w-screen max-w-md`
+              }
+            >
               <div className="absolute top-0 right-0 -mr-10 p-2 flex sm:-mr-10 -pr-4">
                 <button
                   onClick={onClose}
@@ -65,7 +71,7 @@ function SlideOverContent(props: any) {
                     className="text-lg font-medium text-gray-900"
                     {...titleProps}
                   >
-                    <img src={logo} alt="sinnapi" />
+                    <img src={!dashboard ? logo : ""} alt="" />
                   </h2>
                 </div>
                 <div className="mt-6 relative flex-1 px-4 sm:px-6">
@@ -84,11 +90,13 @@ function SlideOver({
   isOpen,
   onClose,
   title,
+  dashboard,
   children,
 }: {
   isOpen: boolean
   onClose: () => void
   title: string
+  dashboard?: boolean
   children?: any
 }) {
   return (
@@ -98,6 +106,7 @@ function SlideOver({
           <SlideOverContent
             title={title}
             onClose={onClose}
+            dashboard={dashboard}
             isOpen={isOpen}
             isDismissable
           >

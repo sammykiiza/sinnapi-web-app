@@ -8,8 +8,10 @@ function DashboardLayout() {
   return (
     <div className="dashboard">
       <Header />
-      <div className="container grid grid-cols-[auto,1fr] mt-10">
-        <SideBarDashboard />
+      <div className="container grid grid-cols-1 lg:grid-cols-[auto,1fr] mx-auto lg:mt-[2%]">
+        <div className="hidden lg:block">
+          <SideBarDashboard />
+        </div>
         <div>
           <Outlet />
         </div>
