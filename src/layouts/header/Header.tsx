@@ -35,11 +35,11 @@ function Header() {
             <img
               src={logo}
               alt="sinnapi"
-              className="max-w-[150%] xl:max-w-[110%]"
+              className="max-w-[150%] xl:max-w-[100%]"
             />
           </Link>
         </div>
-        <div className="col-span-12 xl:col-start-2 xl:col-span-9 row-start-2 xl:row-start-1 xl:justify-self-center mb-2 mx-auto xl:mb-0 flex flex-row w-full">
+        <div className="col-span-12 xl:col-start-2 xl:col-span-9 row-start-2 xl:row-start-1 xl:justify-self-center mb-2 xl:ml-4 xl:mb-0 flex flex-row w-full">
           <div className="w-full">
             <ReactSelect
               options={vendorCategoriesSelectData}

@@ -18,6 +18,9 @@ export default {
       gridTemplateRows: {
         "12": "repeat(12, minmax(0, 1fr))",
       },
+      gridTemplateColumns: {
+        "13": "repeat(13, minimax(0, 1fr))",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
