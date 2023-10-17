@@ -66,6 +66,15 @@ ul.pagination>li.selected {
   @apply border-theme_secondary bg-white shadow-none h-4 w-4 -my-[0.4rem];
 }
 
+.dashboard {
+  background: linear-gradient(
+    to bottom,
+    theme(colors.gray.100) 0%,
+    theme(colors.gray.100) 35%,
+    theme(colors.white) 35%,
+    theme(colors.white) 100%
+  );
+}
 @tailwind utilities;
 
 

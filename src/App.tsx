@@ -8,6 +8,7 @@ import {
 import Customer from "./features/customer/Customer"
 import NoMatch from "./features/error-components/NoMatch"
 import { useEffect } from "react"
+import { indexRouteCustomer } from "./layouts/routes/cutomer/indexRoute"
 
 export default function App() {
   var pathName = useLocation().pathname
@@ -31,9 +32,14 @@ export default function App() {
           />
         ))}
       </Route>
-      <Route path="/customer" element={<Customer />}>
+      <Route path={"/customer"} element={indexRouteCustomer.component()}>
         {CustomerRoutes.map((route, key) => (
-          <Route path={route.path} element={route.component()} key={key} />
+          <Route
+            index={route.path === "customer" ? true : false}
+            path={route.path}
+            element={route.component()}
+            key={key}
+          />
         ))}
       </Route>
       <Route path="/vendor" element={<Customer />}>

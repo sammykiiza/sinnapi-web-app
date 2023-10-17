@@ -114,7 +114,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="vendor-category"
-                  className="rounded-sm checked:bg-theme_secondary checked:hover:bg-theme_primary checked:focus:bg-theme_secondary focus:outline-none"
+                  className="rounded-sm checked:bg-theme_secondary checked:hover:bg-theme_primary checked:focus:bg-theme_secondary focus:outline-none focus:ring-0"
                   defaultChecked
                   name="contact-category"
                 />
