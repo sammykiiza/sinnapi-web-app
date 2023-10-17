@@ -99,7 +99,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="customer-category"
-                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none checked:text-white"
+                  className="rounded-sm checked:bg-theme_secondary checked:hover:bg-theme_primary checked:focus:bg-theme_secondary focus:outline-none focus:ring-0"
                   defaultChecked
                   name="contact-category"
                 />
@@ -114,7 +114,7 @@ function Contact() {
                 <input
                   type="checkbox"
                   id="vendor-category"
-                  className="h-[0.6rem] checked:accent-theme_secondary focus:outline-none"
+                  className="rounded-sm checked:bg-theme_secondary checked:hover:bg-theme_primary checked:focus:bg-theme_secondary focus:outline-none"
                   defaultChecked
                   name="contact-category"
                 />
