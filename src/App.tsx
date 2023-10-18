@@ -32,10 +32,13 @@ export default function App() {
           />
         ))}
       </Route>
-      <Route path={"/customer"} element={indexRouteCustomer.component()}>
+      <Route
+        path={CustomerRoutes[0].path}
+        element={indexRouteCustomer.component()}
+      >
         {CustomerRoutes.map((route, key) => (
           <Route
-            index={route.path === "customer" ? true : false}
+            index={route.path === "/customer" ? true : false}
             path={route.path}
             element={route.component()}
             key={key}

@@ -2,7 +2,7 @@ import { CustomerComponents } from "../../../features/customer"
 
 export const CustomerRoutes = [
   {
-    path: "",
+    path: "/customer",
     component: CustomerComponents.Dashboard,
   },
   {

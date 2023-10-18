@@ -10,12 +10,23 @@ import { faUserTie } from "@fortawesome/free-solid-svg-icons/faUserTie"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import { Link } from "react-router-dom"
+import { useAppDispatch } from "../../../app/hooks"
+import {
+  setDashboard,
+  setIsOpen,
+} from "../../../layouts/sidebars/sideBarsSlice"
 
 function CategoriesMenu() {
+  const dispatch = useAppDispatch()
+  dispatch(setDashboard(false))
   return (
     <div className="flex flex-col gap-y-2 text-theme_black font-theme_secondary_bold text-sm m-4">
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faHouse}
@@ -26,7 +37,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faCakeCandles}
@@ -37,7 +52,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faHouse}
@@ -48,7 +67,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faMusic}
@@ -59,7 +82,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faGem}
@@ -70,7 +97,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faGem}
@@ -81,7 +112,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faCar}
@@ -92,7 +127,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faUser}
@@ -103,7 +142,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faUser}
@@ -114,7 +157,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faUserTie}
@@ -125,7 +172,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faCameraRetro}
@@ -136,7 +187,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faUser}
@@ -147,7 +202,11 @@ function CategoriesMenu() {
         </Link>
       </div>
       <div>
-        <Link to={"/"} className="flex flex-row space-x-3">
+        <Link
+          to={"/"}
+          className="flex flex-row space-x-3"
+          onClick={() => dispatch(setIsOpen(false))}
+        >
           <div>
             <FontAwesomeIcon
               icon={faEllipsis}

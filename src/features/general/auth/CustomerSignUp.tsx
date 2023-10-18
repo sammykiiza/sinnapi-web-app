@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Banner from "../banners/other-pages/Banner"
 
 function CustomerSignUp() {
+  const navigate = useNavigate()
   return (
     <div className="grid grid-rows-[repeat(auto-fill,minmax(300px,1fr))]">
       <div className="col-span-1 row-span-1">
@@ -65,7 +66,10 @@ function CustomerSignUp() {
             </Link>
           </p>
         </div>
-        <button className="col-span-2 text-white px-20 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm">
+        <button
+          onClick={() => navigate("/customer")}
+          className="col-span-2 text-white px-20 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm"
+        >
           Sign up
         </button>
       </form>

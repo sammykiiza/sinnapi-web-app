@@ -2,8 +2,12 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import CustomIcon from "../../reusables/icons/CustomIcon"
+import { useAppDispatch } from "../../../app/hooks"
+import { setDashboard, setIsOpen } from "../sideBarsSlice"
 
 function SideBarDashboard() {
+  const dispatch = useAppDispatch()
+  dispatch(setDashboard(true))
   const currentUrl = useLocation().pathname
   return (
     <div className="w-full lg:w-60 space-y-4 flex flex-col items-center">
@@ -27,6 +31,7 @@ function SideBarDashboard() {
               (currentUrl === "/customer" ? "text-theme_secondary" : "") +
               ` flex flex-row space-x-3 hover:text-theme_secondary`
             }
+            onClick={() => dispatch(setIsOpen(false))}
           >
             <div>
               <CustomIcon
@@ -45,6 +50,7 @@ function SideBarDashboard() {
                 ? "text-theme_secondary"
                 : "") + " flex flex-row space-x-3 hover:text-theme_secondary"
             }
+            onClick={() => dispatch(setIsOpen(false))}
           >
             <div>
               <CustomIcon
@@ -63,6 +69,7 @@ function SideBarDashboard() {
                 ? "text-theme_secondary"
                 : "") + " flex flex-row space-x-3 hover:text-theme_secondary"
             }
+            onClick={() => dispatch(setIsOpen(false))}
           >
             <div>
               <CustomIcon

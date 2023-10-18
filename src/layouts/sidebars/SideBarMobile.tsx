@@ -1,27 +1,30 @@
-import React, { Fragment, useState } from "react"
+import { Fragment } from "react"
 import { OverlayProvider, usePreventScroll } from "react-aria"
 import SlideOver from "./SlideOver"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars"
 import CategoriesMenu from "../../features/general/home/CategoriesMenu"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import { setIsOpen } from "./sideBarsSlice"
 
 function SideBarMobile() {
-  const [isOpen, setIsOpen] = useState(false)
-
+  const isOpen = useAppSelector((state) => state.sideBar.isOpen)
+  const dashboard = useAppSelector((state) => state.sideBar.dashboard)
+  const dispatch = useAppDispatch()
   usePreventScroll({ isDisabled: !isOpen })
   return (
     <Fragment>
       <FontAwesomeIcon
         className={isOpen ? "hidden" : "block text-white text-xl"}
         icon={faBars}
-        onClick={() => setIsOpen(true)}
+        onClick={() => dispatch(setIsOpen(true))}
       />
       <OverlayProvider>
         <SlideOver
           title="Sinnapi"
           isOpen={isOpen}
-          dashboard={false}
-          onClose={() => setIsOpen(false)}
+          dashboard={dashboard}
+          onClose={() => dispatch(setIsOpen(false))}
         >
           <CategoriesMenu />
         </SlideOver>
