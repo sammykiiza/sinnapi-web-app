@@ -12,7 +12,7 @@ function SideBarMobile() {
   return (
     <Fragment>
       <FontAwesomeIcon
-        className={isOpen ? "hidden" : "block text-white text-base"}
+        className={isOpen ? "hidden" : "block text-white text-xl"}
         icon={faBars}
         onClick={() => setIsOpen(true)}
       />
@@ -20,6 +20,7 @@ function SideBarMobile() {
         <SlideOver
           title="Sinnapi"
           isOpen={isOpen}
+          dashboard={false}
           onClose={() => setIsOpen(false)}
         >
           <CategoriesMenu />

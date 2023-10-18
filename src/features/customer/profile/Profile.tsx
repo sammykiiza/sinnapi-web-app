@@ -1,10 +1,76 @@
-import React from "react"
+import FileUploaderCircle from "../../../layouts/reusables/file-uploaders/FileUploaderCircle"
 
 function Profile() {
   return (
-    <>
-      <div>Profile</div>
-    </>
+    <div className="flex flex-col gap-y-14 mt-2 lg:mt-0 mb-20 md:px-10 xl:px-32">
+      <div>
+        <h1 className="text-3xl px-2 md:px-0 text-theme_primary font-semibold">
+          My Profile
+        </h1>
+      </div>
+      <div className="bg-white md:rounded-md flex flex-col py-4 divide-y-2 shadow-xl">
+        <div className="text-lg px-6 py-4 font-theme_secondary_bold font-bold">
+          Customer Profile
+        </div>
+        <div className="flex flex-col md:px-6 pb-8">
+          <div className="flex flex-col md:flex-row px-20 py-8 gap-x-4 gap-y-4 justify-center items-center">
+            <FileUploaderCircle />
+            <div className="flex flex-col items-center md:items-start font-theme_secondary_light">
+              <h3 className="font-bold text-sm">Upload Profile Image</h3>
+              <p className="text-gray-400 text-center text-xs">
+                Files must be less than{" "}
+                <span className="text-theme_black">4mb</span>, allowed file
+                types are <span className="text-theme_black">png/jpg</span>
+              </p>
+            </div>
+          </div>
+          <form className="w-full grid grid-cols-6 px-2 md:px-0 gap-4">
+            <div className="col-span-6 md:col-span-2">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full profile-input"
+              />
+            </div>
+            <div className="col-span-6 md:col-span-2">
+              <input
+                type="text"
+                placeholder="Email"
+                className="w-full profile-input"
+              />
+            </div>
+            <div className="col-span-6 md:col-span-2">
+              <input
+                type="text"
+                placeholder="Contact Number"
+                className="w-full profile-input"
+              />
+            </div>
+            <div className="col-span-6">
+              <input
+                type="text"
+                placeholder="Address"
+                className="w-full profile-input"
+              />
+            </div>
+            <div className="col-span-6">
+              <textarea
+                className="w-full rounded-md bg-gray-100 border-gray-300 placeholder:text-gray-400 text-sm px-4 focus:outline-none focus:ring-0 focus:border-gray-300"
+                placeholder="About me"
+                name=""
+                rows={10}
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="col-span-3 md:col-span-2 xl:col-span-1 font-theme_secondary_bold text-xs md:px-3 py-2 whitespace-nowrap text-center rounded-full text-white bg-theme_secondary hover:bg-theme_primary"
+            >
+              Update Profile
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   )
 }
 

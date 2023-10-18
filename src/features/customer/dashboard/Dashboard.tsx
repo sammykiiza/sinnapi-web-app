@@ -76,9 +76,9 @@ function Dashboard() {
         <div className="relative rounded-md grid">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end m-1 p-1 rounded-md"
+            className="absolute bg-white text-xs text-theme_black justify-self-end m-1 p-1 rounded-md cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-white items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-white items-center gap-y-2 cursor-pointer">
             <CustomIcon type={"faLocationDot" as unknown as IconDefinition} />
             <p className="text-sm">Venue</p>
           </div>
@@ -91,13 +91,13 @@ function Dashboard() {
         <div className="relative rounded-md grid bg-teal-100">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1 cursor-pointer"
           />
           <CustomIcon
             type={"faPlus" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1 cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2 cursor-pointer">
             <CustomIcon type={"faUser" as unknown as IconDefinition} />
             <p className="text-theme_black">MC</p>
           </div>
@@ -110,13 +110,13 @@ function Dashboard() {
         <div className="relative rounded-md grid bg-teal-100">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1 cursor-pointer"
           />
           <CustomIcon
             type={"faPlus" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1 cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2 cursor-pointer">
             <CustomIcon type={"faVideo" as unknown as IconDefinition} />
             <p className="text-theme_black">Videographer</p>
           </div>
@@ -129,13 +129,13 @@ function Dashboard() {
         <div className="relative rounded-md grid bg-teal-100">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1 cursor-pointer"
           />
           <CustomIcon
             type={"faPlus" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1 cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2 cursor-pointer">
             <CustomIcon
               type={"faEnvelopeOpenText" as unknown as IconDefinition}
             />
@@ -150,13 +150,13 @@ function Dashboard() {
         <div className="relative rounded-md grid bg-teal-100">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1 cursor-pointer"
           />
           <CustomIcon
             type={"faPlus" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1 cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2 cursor-pointer">
             <CustomIcon type={"faGift" as unknown as IconDefinition} />
             <p className="text-theme_black">Photography</p>
           </div>
@@ -169,13 +169,13 @@ function Dashboard() {
         <div className="relative rounded-md grid bg-teal-100">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end hidden rounded-md m-1 p-1 cursor-pointer"
           />
           <CustomIcon
             type={"faPlus" as unknown as IconDefinition}
-            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1"
+            className="absolute bg-white text-xs text-theme_black justify-self-end rounded m-0.5 p-1 cursor-pointer"
           />
-          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2">
+          <div className="absolute place-self-center flex flex-col text-teal-400 items-center gap-y-2 cursor-pointer">
             <CustomIcon type={"faCakeCandles" as unknown as IconDefinition} />
             <p className="text-theme_black">Cake</p>
           </div>

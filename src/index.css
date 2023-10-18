@@ -65,14 +65,17 @@ ul.pagination>li.selected {
 .multi-range-slider .thumb::before {
   @apply border-theme_secondary bg-white shadow-none h-4 w-4 -my-[0.4rem];
 }
+.profile-input {
+  @apply rounded-md bg-gray-100 border-gray-300 placeholder:text-gray-400 text-sm px-4 focus:outline-none focus:ring-0 focus:border-gray-300 h-10;
+}
 @tailwind utilities;
 
 .dashboard {
   background: linear-gradient(
     to bottom,
     theme(colors.gray.100) 0%,
-    theme(colors.gray.100) 20%,
-    theme(colors.white) 20%,
+    theme(colors.gray.100) 25%,
+    theme(colors.white) 25%,
     theme(colors.white) 100%
   );
 }

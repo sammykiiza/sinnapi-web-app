@@ -44,13 +44,7 @@ function SlideOverContent(props: any) {
           transition={{ ease: "easeInOut", duration: 0.5 }}
         >
           <FocusScope contain restoreFocus>
-            <div
-              className={
-                dashboard
-                  ? `w-30vw`
-                  : `w-60vw` + ` relative md:w-screen max-w-md`
-              }
-            >
+            <div className={`relative w-fit`}>
               <div className="absolute top-0 right-0 -mr-10 p-2 flex sm:-mr-10 -pr-4">
                 <button
                   onClick={onClose}
@@ -71,7 +65,7 @@ function SlideOverContent(props: any) {
                     className="text-lg font-medium text-gray-900"
                     {...titleProps}
                   >
-                    <img src={!dashboard ? logo : ""} alt="" />
+                    <img src={!dashboard ? logo : ""} alt="" className="w-28" />
                   </h2>
                 </div>
                 <div className="mt-6 relative flex-1 px-4 sm:px-6">

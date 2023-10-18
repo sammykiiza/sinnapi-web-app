@@ -32,9 +32,9 @@ function Header() {
   return (
     <div className="bg-theme_primary py-4">
       <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center max-w-6xl mx-auto">
-        <div className="pl-2 xl:pl-0 lg:row-start-1 col-span-2 md:col-span-1 flex flex-row justify-between items-center">
+        <div className="pl-2 xl:pl-0 lg:row-start-1 col-span-2 md:col-span-1 flex flex-row justify-between items-center space-x">
           <div
-            className={checkDashboardPath() ? "lg:hidden" : "" + "xl:hidden"}
+            className={(checkDashboardPath() ? "lg:hidden" : "") + " xl:hidden"}
           >
             {checkDashboardPath() ? (
               <SideBarDashboardMobile />
