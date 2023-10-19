@@ -70,7 +70,17 @@ ul.pagination>li.selected {
 }
 @tailwind utilities;
 
-.dashboard {
+.dashboard-customer {
+  background: linear-gradient(
+    to bottom,
+    theme(colors.gray.100) 0%,
+    theme(colors.gray.100) 25%,
+    theme(colors.white) 25%,
+    theme(colors.white) 100%
+  );
+}
+
+.dashboard-vendor {
   background: linear-gradient(
     to bottom,
     theme(colors.gray.100) 0%,

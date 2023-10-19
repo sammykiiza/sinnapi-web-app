@@ -12,7 +12,7 @@ import CustomIcon from "../reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import SideBarDashboardMobile from "../sidebars/dashboards/SideBarDashboardMobile"
 
-function Header() {
+function HeaderDashboard() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   useEffect(() => {
     const updateScreenWidth = () => {
@@ -165,6 +165,17 @@ function Header() {
                     Customer
                   </Link>
                 </div>
+                <form method="POST" action="#" role="none" className="hidden">
+                  <button
+                    type="submit"
+                    className="text-gray-700 block w-full px-4 py-2 text-left text-sm"
+                    role="menuitem"
+                    tabIndex={-1}
+                    id="menu-item-3"
+                  >
+                    Sign out
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -181,4 +192,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderDashboard
