@@ -1,4 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { ComponentProps } from "react"
 
 export interface TopEventsLisitingsCardProps extends TopEventsVendorsCardProps {
   vendorName?: string
@@ -20,3 +21,7 @@ export type VendorCategory =
   | "Jewellers"
   | "Suits"
   | "Fashion"
+
+export type FileUPloaderProps = {
+  defaultImage?: string
+} & ComponentProps<"div">

@@ -37,7 +37,7 @@ function SideBarDashboard() {
           {userType === "customer" ? "Kato Charles" : "Welcome vendor"}
         </div>
       </div>
-      <div className="lg:shadow-lg bg-white p-8 rounded-md flex flex-col space-y-4">
+      <div className="lg:shadow-lg bg-white p-8 rounded-md font-theme_secondary_bold flex flex-col space-y-4">
         <div>
           <Link
             to={

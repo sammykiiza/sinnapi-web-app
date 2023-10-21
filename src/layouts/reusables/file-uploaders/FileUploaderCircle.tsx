@@ -1,11 +1,16 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
-import React, { ComponentProps, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import CustomIcon from "../icons/CustomIcon"
+import { FileUPloaderProps } from "../../../utils/types"
 
-function FileUploaderCircle(props: ComponentProps<"div">) {
+function FileUploaderCircle(props: FileUPloaderProps) {
   const [selectedImage, setSelectedImage] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
-  const fileInputClick = () => {
+
+  /**
+   * Simulates clicking on the file Input element
+   */
+  const fileInputClickSimulation = () => {
     fileInputRef.current?.click()
   }
 
@@ -23,12 +28,12 @@ function FileUploaderCircle(props: ComponentProps<"div">) {
         className="flex flex-col items-center justify-center relative bg-teal-100 w-[100px] h-[100px] cursor-pointer rounded-full"
         onClick={(e) => {
           e.stopPropagation()
-          fileInputClick()
+          fileInputClickSimulation()
         }}
       >
-        {selectedImage !== "" && (
+        {(selectedImage !== "" || props.defaultImage) && (
           <img
-            src={selectedImage}
+            src={selectedImage ? selectedImage : props.defaultImage}
             alt="profile"
             className="rounded-full w-[100px] h-[100px] object-center object-cover"
           />
@@ -38,7 +43,7 @@ function FileUploaderCircle(props: ComponentProps<"div">) {
           className="absolute top-0 right-1 bg-white rounded-full border-2 border-teal-300 p-1 cursor-pointer"
           onClick={(e) => {
             e.stopPropagation()
-            fileInputClick()
+            fileInputClickSimulation()
           }}
         />
         {selectedImage === "" && (
@@ -47,7 +52,7 @@ function FileUploaderCircle(props: ComponentProps<"div">) {
             className="text-2xl text-gray-400 cursor-pointer"
             onClick={(e) => {
               e.stopPropagation()
-              fileInputClick()
+              fileInputClickSimulation()
             }}
           />
         )}
@@ -55,13 +60,12 @@ function FileUploaderCircle(props: ComponentProps<"div">) {
           type="file"
           ref={fileInputRef}
           name="profile-image-upload"
-          id="profile-image-upload"
           accept="png,jpg"
           onChange={(e) => {
             e.target.files &&
               setSelectedImage(URL.createObjectURL(e.target.files[0]))
           }}
-          className="hidden ml-32 cursor-pointer absolute"
+          className="hidden"
         />
       </div>
     </div>

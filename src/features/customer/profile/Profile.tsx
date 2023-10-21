@@ -1,10 +1,10 @@
-import FileUploaderCircle from "../../../layouts/reusables/file-uploaders/FileUploaderCircle"
+import FileUploaderCircleWithText from "../../../layouts/reusables/file-uploaders/FileUploaderCircleWithText"
 
 function Profile() {
   return (
     <div className="flex flex-col gap-y-14 mt-2 lg:mt-0 mb-20 md:px-10 xl:px-32">
       <div>
-        <h1 className="text-3xl px-2 md:px-0 text-theme_primary font-semibold">
+        <h1 className="text-3xl px-2 md:px-0 text-theme_primary font-theme_secondary_bold">
           My Profile
         </h1>
       </div>
@@ -13,17 +13,7 @@ function Profile() {
           Customer Profile
         </div>
         <div className="flex flex-col md:px-6 pb-8">
-          <div className="flex flex-col md:flex-row px-20 py-8 gap-x-4 gap-y-4 justify-center items-center">
-            <FileUploaderCircle />
-            <div className="flex flex-col items-center md:items-start font-theme_secondary_light">
-              <h3 className="font-bold text-sm">Upload Profile Image</h3>
-              <p className="text-gray-400 text-center text-xs">
-                Files must be less than{" "}
-                <span className="text-theme_black">4mb</span>, allowed file
-                types are <span className="text-theme_black">png/jpg</span>
-              </p>
-            </div>
-          </div>
+          <FileUploaderCircleWithText />
           <form className="w-full grid grid-cols-6 px-2 md:px-0 gap-4">
             <div className="col-span-6 md:col-span-2">
               <input

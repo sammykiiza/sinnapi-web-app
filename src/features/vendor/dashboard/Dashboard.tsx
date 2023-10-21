@@ -2,6 +2,7 @@ import React from "react"
 import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
+import FileUploaderWide from "../../../layouts/reusables/file-uploaders/FileUploaderWide"
 
 function Dashboard() {
   return (
@@ -13,27 +14,7 @@ function Dashboard() {
             alt="vendor-dashboard-banner"
             className="object-cover object-center w-full h-64 -mb-8 lg:rounded"
           />
-          <div className="flex flex-row justify-between items-center px-2 xl:px-8 py-4 rounded-b bg-white">
-            <div className="flex flex-row items-center gap-x-2 xl:ml-5">
-              <img
-                src="/images/vendor/dashboard/banner-mini.jpg"
-                alt="vendor-banner-mini"
-                className="object-cover object-center w-20 h-20 rounded-full"
-              />
-              <div className="flex flex-col">
-                <p className="font-theme_secondary_bold text-sm">
-                  Upload Brand Image
-                </p>
-                <p className="font-theme_secondary_light text-xs text-gray-400">
-                  Best image size 250 x 250
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-center gap-x-1 cursor-pointer rounded-md border px-3 py-2 border-gray-300 text-theme_secondary hover:text-theme_primary text-sm">
-              <CustomIcon type={"faPenToSquare" as unknown as IconDefinition} />
-              <p>Edit</p>
-            </div>
-          </div>
+          <FileUploaderWide defaultImage="/images/vendor/dashboard/banner-mini.jpg" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-4">
           <div className="flex flex-row gap-x-2 p-4 bg-white rounded drop-shadow-xl">
@@ -101,7 +82,7 @@ function Dashboard() {
                 <img
                   src="/images/vendor/listings/listing-1.jpg"
                   alt="listing"
-                  className="object-center object-cover rounded-lg md:aspect-video md:h-28"
+                  className="object-center object-cover rounded-lg aspect-video h-28"
                 />
               </div>
               <div className="col-span-1 md:col-span-2 flex flex-col">
@@ -138,7 +119,7 @@ function Dashboard() {
                 <img
                   src="/images/vendor/listings/listing-2.jpg"
                   alt="listing"
-                  className="object-center object-cover rounded-lg md:aspect-video md:h-28"
+                  className="object-center object-cover rounded-lg aspect-video h-28"
                 />
               </div>
               <div className="col-span-1 md:col-span-2 flex flex-col">
@@ -175,7 +156,7 @@ function Dashboard() {
                 <img
                   src="/images/vendor/listings/listing-3.jpg"
                   alt="listing"
-                  className="object-center object-cover rounded-lg md:aspect-video md:h-28"
+                  className="object-center object-cover rounded-lg aspect-video h-28"
                 />
               </div>
               <div className="col-span-1 md:col-span-2 flex flex-col">
