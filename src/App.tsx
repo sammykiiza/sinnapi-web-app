@@ -12,15 +12,15 @@ import { indexRouteVendor } from "./layouts/routes/vendor/indexRouteVendor"
 import { checkAuth } from "./services/auth/useAuth"
 
 export default function App() {
-  var pathName = useLocation().pathname
-  useEffect(() => {
-    if (pathName === "/") {
-      pathName = "Home"
-    } else if (pathName !== "Home") {
-      pathName = pathName.slice(1)
-    }
-    document.title = `Sinnapi | ${pathName}`
-  }, [pathName])
+  // var pathName = useLocation().pathname
+  // useEffect(() => {
+  //   if (pathName === "/") {
+  //     pathName = "Home"
+  //   } else if (pathName !== "Home") {
+  //     pathName = pathName.slice(1)
+  //   }
+  //   document.title = `Sinnapi | ${pathName}`
+  // }, [pathName])
   const userTypeLocaStorage = localStorage.getItem("userType")
   const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
   return (

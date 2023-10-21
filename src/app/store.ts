@@ -3,6 +3,7 @@ import counterReducer from "../features/counter/counterSlice"
 import mainLayoutReducer from "../layouts/main/mainLayoutSlice"
 import sideBarsSlice from "../layouts/sidebars/sideBarsSlice"
 import authSlice from "../services/auth/authSlice"
+import mapSlice from "../layouts/reusables/map/mapSlice"
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     mainLayout: mainLayoutReducer,
     sideBar: sideBarsSlice,
     auth: authSlice,
+    map: mapSlice,
   },
 })
 

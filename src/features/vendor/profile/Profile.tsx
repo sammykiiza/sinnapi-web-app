@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { Tab } from "@headlessui/react"
 import FileUploaderCircleWithText from "../../../layouts/reusables/file-uploaders/FileUploaderCircleWithText"
 import Wysiwyg from "../../../layouts/reusables/wysiwyg/Wysiwyg"
@@ -8,6 +8,7 @@ import FileUploaderSquare from "../../../layouts/reusables/file-uploaders/FileUp
 import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import Map from "../../../layouts/reusables/map/Map"
+import { useAppSelector } from "../../../app/hooks"
 
 function Profile() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -20,6 +21,7 @@ function Profile() {
       window.removeEventListener("resize", updateScreenWidth)
     }
   }, [screenWidth])
+  const mapPositionFromCache = useAppSelector((state) => state.map.LatLng)
   return (
     <div className="space-y-12">
       <h1 className="text-3xl px-2 lg:px-0 text-theme_primary font-theme_secondary_bold">
@@ -142,20 +144,24 @@ function Profile() {
                     <input
                       type="number"
                       name="latitude"
-                      placeholder="Latitude"
+                      placeholder={"Latitude"}
+                      defaultValue={mapPositionFromCache.lat}
                       className="w-full bg-gray-100 rounded-md border border-gray-400 text-xs text-gray-400 p-3 font-theme_secondary_light focus:outline-none focus:ring-0 focus:border-gray-400"
+                      key={mapPositionFromCache.lat}
                     />
                   </div>
                   <div className="col-span-6 md:col-span-3">
                     <input
                       type="number"
                       name="longitude"
-                      placeholder="Longitude"
+                      placeholder={"Longitude"}
+                      defaultValue={mapPositionFromCache.lng}
                       className="w-full bg-gray-100 rounded-md border border-gray-400 text-xs text-gray-400 p-3 font-theme_secondary_light focus:outline-none focus:ring-0 focus:border-gray-400"
+                      key={mapPositionFromCache.lng}
                     />
                   </div>
                 </div>
-                <Map height={300} className="z-0 rounded" />
+                <Map height={300} settable className="z-auto rounded" />
                 <button
                   type="submit"
                   className="mt-12 mb-6 font-theme_secondary_bold text-xs px-3 py-2 whitespace-nowrap text-center rounded-full text-white bg-theme_secondary hover:bg-theme_primary"

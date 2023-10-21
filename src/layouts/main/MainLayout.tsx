@@ -4,15 +4,19 @@ import Footer from "../footer/Footer"
 import BottomFooter from "../footer/BottomFooter"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { showFooter } from "./mainLayoutSlice"
+import { useEffect } from "react"
 
 function MainLayout() {
   const showFooterVariable = useAppSelector(
     (state) => state.mainLayout.showFooter,
   )
   const dispatch = useAppDispatch()
-  useLocation().pathname === "/listing-with-map"
-    ? dispatch(showFooter(false))
-    : dispatch(showFooter(true))
+  const location = useLocation()
+  useEffect(() => {
+    location.pathname === "/listing-with-map"
+      ? dispatch(showFooter(false))
+      : dispatch(showFooter(true))
+  })
 
   return (
     <div>

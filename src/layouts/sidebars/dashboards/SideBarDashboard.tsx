@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import CustomIcon from "../../reusables/icons/CustomIcon"
 import { useAppDispatch } from "../../../app/hooks"
@@ -7,7 +7,10 @@ import { setDashboard, setIsOpen } from "../sideBarsSlice"
 
 function SideBarDashboard() {
   const dispatch = useAppDispatch()
-  dispatch(setDashboard(true))
+
+  useEffect(() => {
+    dispatch(setDashboard(true))
+  })
   const userTypeLocaStorage = localStorage.getItem("userType")
   const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
   const currentUrl = useLocation().pathname
