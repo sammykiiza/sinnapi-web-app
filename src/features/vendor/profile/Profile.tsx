@@ -8,7 +8,8 @@ import FileUploaderSquare from "../../../layouts/reusables/file-uploaders/FileUp
 import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import Map from "../../../layouts/reusables/map/Map"
-import { useAppSelector } from "../../../app/hooks"
+import { useAppDispatch, useAppSelector } from "../../../app/hooks"
+import { setSocialMedia } from "../vendorSlice"
 
 function Profile() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -22,6 +23,19 @@ function Profile() {
     }
   }, [screenWidth])
   const mapPositionFromCache = useAppSelector((state) => state.map.LatLng)
+  const socialMediaData = useAppSelector((state) => state.vendor.SocailMedia)
+  const [toggleSocialMediaAddForm, setToggleSocialMediaAddForm] =
+    useState(false)
+  const [socialMediaTitle, setSocialMediaTitle] = useState("")
+  const [socialMediaLink, setSocialMediaLink] = useState("")
+  const dispatch = useAppDispatch()
+  const handleSocialMediaAddition = () => {
+    const socialMediaAddition = {
+      title: socialMediaTitle,
+      link: socialMediaLink,
+    }
+    dispatch(setSocialMedia(socialMediaAddition))
+  }
   return (
     <div className="space-y-12">
       <h1 className="text-3xl px-2 lg:px-0 text-theme_primary font-theme_secondary_bold">
@@ -52,6 +66,7 @@ function Profile() {
           <Tab.Panels
             className={"col-span-8 xl:col-span-6 mb-10 bg-gray-100 shadow-xl"}
           >
+            {/* Business Profile */}
             <Tab.Panel className={"rounded-md"}>
               <div className="w-full bg-white font-theme_secondary_light text-sm px-4 py-6">
                 Business Profile
@@ -170,7 +185,76 @@ function Profile() {
                 </button>
               </div>
             </Tab.Panel>
-            <Tab.Panel className={"rounded-md"}>Content 2</Tab.Panel>
+            {/* End of Business Profile */}
+            {/* Social Media */}
+            <Tab.Panel className={"rounded-md"}>
+              <div className="flex flex-col space-y-2 divide-y-2 justify-center bg-white font-theme_secondary_light">
+                <div className="px-4 py-2">Social Media</div>
+                <div className="my-4 py-4 px-4 flex flex-col items-center">
+                  <div className="border border-theme_black w-full divide-y-2 md:divide-y-0 space-y-4 my-4 py-2">
+                    {socialMediaData.map((socialMedia, i) => (
+                      <div
+                        className="grid grid-cols-3 gap-4 px-4 py-4 md:py-0 text-xs"
+                        key={i}
+                      >
+                        <input
+                          type="text"
+                          placeholder={socialMedia.title}
+                          className="bg-gray-100 text-gray-400 rounded border border-gray-400 p-2 col-span-3 md:col-span-1 text-xs focus:outline-none focus:ring-0 focus:border-gray-400"
+                        />
+                        <input
+                          type="text"
+                          placeholder={socialMedia.link}
+                          className="bg-gray-100 text-gray-400 rounded border border-gray-400 p-2 col-span-3 md:col-span-2 text-xs focus:outline-none focus:ring-0 focus:border-gray-400"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault()
+                      handleSocialMediaAddition()
+                    }}
+                    className={
+                      (!toggleSocialMediaAddForm ? "hidden" : "") +
+                      " w-full my-4 grid grid-cols-3 gap-4 text-xs"
+                    }
+                  >
+                    <input
+                      type="text"
+                      placeholder={"Title"}
+                      className="bg-gray-100 text-gray-400 rounded border border-gray-400 p-2 col-span-3 md:col-span-1 text-xs focus:outline-none focus:ring-0 focus:border-gray-400"
+                      onChange={(e) => setSocialMediaTitle(e.target.value)}
+                    />
+                    <input
+                      type="text"
+                      placeholder={"Link"}
+                      className="bg-gray-100 text-gray-400 rounded border border-gray-400 p-2 col-span-3 md:col-span-2 text-xs focus:outline-none focus:ring-0 focus:border-gray-400"
+                      onChange={(e) => setSocialMediaLink(e.target.value)}
+                    />
+                    <button
+                      type="submit"
+                      className="bg-theme_secondary hover:bg-theme_primary text-white text-sm px-3 py-1 font-theme_secondary_bold justify-self-start rounded"
+                    >
+                      Add
+                    </button>
+                  </form>
+                  <div
+                    className="self-center bg-theme_secondary hover:bg-theme_primary rounded py-2 px-3 flex flex-row items-center space-x-2 cursor-pointer"
+                    onClick={() => setToggleSocialMediaAddForm(true)}
+                  >
+                    <CustomIcon
+                      type={"faPlus" as unknown as IconDefinition}
+                      className="text-white"
+                    />
+                    <span className="font-theme_secondary_bold text-sm text-white">
+                      Add Social Media
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Tab.Panel>
+            {/* End of Social Media */}
           </Tab.Panels>
         </div>
       </Tab.Group>

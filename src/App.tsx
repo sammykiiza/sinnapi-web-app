@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import {
   CustomerRoutes,
   GeneralRoutes,
@@ -6,21 +6,11 @@ import {
   indexRoute,
 } from "./layouts/routes"
 import NoMatch from "./features/error-components/NoMatch"
-import { useEffect } from "react"
 import { indexRouteCustomer } from "./layouts/routes/cutomer/indexRoute"
 import { indexRouteVendor } from "./layouts/routes/vendor/indexRouteVendor"
 import { checkAuth } from "./services/auth/useAuth"
 
 export default function App() {
-  // var pathName = useLocation().pathname
-  // useEffect(() => {
-  //   if (pathName === "/") {
-  //     pathName = "Home"
-  //   } else if (pathName !== "Home") {
-  //     pathName = pathName.slice(1)
-  //   }
-  //   document.title = `Sinnapi | ${pathName}`
-  // }, [pathName])
   const userTypeLocaStorage = localStorage.getItem("userType")
   const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
   return (
