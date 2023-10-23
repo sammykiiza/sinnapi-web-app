@@ -3,6 +3,8 @@ import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 import FileUploaderWide from "../../../layouts/reusables/file-uploaders/FileUploaderWide"
+import { listingsData } from "../../../utils/data"
+import VendorListingCard from "../../../layouts/reusables/VendorListingCard"
 
 function Dashboard() {
   return (
@@ -77,116 +79,16 @@ function Dashboard() {
             </Link>
           </div>
           <div className="flex flex-col divide-y-2">
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-y-2 gap-x-2 items-center py-6 px-4">
-              <div className="row-span-2 md:row-span-1 col-span-1 rounded-lg">
-                <img
-                  src="/images/vendor/listings/listing-1.jpg"
-                  alt="listing"
-                  className="object-center object-cover rounded-lg aspect-video h-28"
-                />
-              </div>
-              <div className="col-span-1 md:col-span-2 flex flex-col">
-                <p className="font-theme_secondary_bold text-sm">
-                  Muliika Events Photography
-                </p>
-                <p className="font-theme_secondary_light text-gray-400 text-xs">
-                  Kampala
-                </p>
-              </div>
-              <div className="col-span-1 flex flex-col font-theme_secondary_light text-xs text-gray-400">
-                <span>Date Added</span>
-                <span className="border rounded-md text-xs pl-1 md:mr-6">
-                  January 18, 2023
-                </span>
-              </div>
-              <div className="col-span-1 flex flex-col md:justify-self-center font-theme_secondary_light text-xs text-gray-400">
-                <span>Status</span>
-                <span className="border border-amber-300 rounded text-amber-300 px-2">
-                  Pending
-                </span>
-              </div>
-              <div className="md:justify-self-center flex flex-col text-xs text-gray-400">
-                <span>Action</span>
-                <CustomIcon
-                  type={"faEllipsis" as unknown as IconDefinition}
-                  className="border border-gray-500 hover:border-theme_secondary rounded cursor-pointer hover:text-theme_secondary text-base"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-y-2 gap-x-2 items-center py-6 px-4">
-              <div className="row-span-2 md:row-span-1 col-span-1 rounded-lg">
-                <img
-                  src="/images/vendor/listings/listing-2.jpg"
-                  alt="listing"
-                  className="object-center object-cover rounded-lg aspect-video h-28"
-                />
-              </div>
-              <div className="col-span-1 md:col-span-2 flex flex-col">
-                <p className="font-theme_secondary_bold text-sm">
-                  KML Car Hire Services
-                </p>
-                <p className="font-theme_secondary_light text-gray-400 text-xs">
-                  Fort Portal
-                </p>
-              </div>
-              <div className="col-span-1 flex flex-col font-theme_secondary_light text-xs text-gray-400">
-                <span>Date Added</span>
-                <span className="border rounded-md text-xs pl-1 md:mr-6">
-                  March 20, 2023
-                </span>
-              </div>
-              <div className="col-span-1 flex flex-col md:justify-self-center font-theme_secondary_light text-xs text-gray-400">
-                <span>Status</span>
-                <span className="border border-green-400 rounded text-green-400 px-2">
-                  Publish
-                </span>
-              </div>
-              <div className="md:justify-self-center flex flex-col text-xs text-gray-400">
-                <span>Action</span>
-                <CustomIcon
-                  type={"faEllipsis" as unknown as IconDefinition}
-                  className="border border-gray-500 hover:border-theme_secondary rounded cursor-pointer hover:text-theme_secondary text-base"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-y-2 gap-x-2 items-center py-6 px-4">
-              <div className="row-span-2 md:row-span-1 col-span-1 rounded-lg">
-                <img
-                  src="/images/vendor/listings/listing-3.jpg"
-                  alt="listing"
-                  className="object-center object-cover rounded-lg aspect-video h-28"
-                />
-              </div>
-              <div className="col-span-1 md:col-span-2 flex flex-col">
-                <p className="font-theme_secondary_bold text-sm">
-                  Kavumba Recreation
-                </p>
-                <p className="font-theme_secondary_light text-gray-400 text-xs">
-                  Wakiso
-                </p>
-              </div>
-              <div className="col-span-1 flex flex-col font-theme_secondary_light text-xs text-gray-400">
-                <span>Date Added</span>
-                <span className="border rounded-md text-xs pl-1 md:mr-6">
-                  April 15, 2023
-                </span>
-              </div>
-              <div className="col-span-1 flex flex-col md:justify-self-center font-theme_secondary_light text-xs text-gray-400">
-                <span>Status</span>
-                <span className="border border-gray-400 rounded text-gray-40border-gray-400 px-2">
-                  Draft
-                </span>
-              </div>
-              <div className="md:justify-self-center flex flex-col text-xs text-gray-400">
-                <span>Action</span>
-                <CustomIcon
-                  type={"faEllipsis" as unknown as IconDefinition}
-                  className="border border-gray-500 hover:border-theme_secondary rounded cursor-pointer hover:text-theme_secondary text-base"
-                />
-              </div>
-            </div>
+            {listingsData.slice(0, 3).map((listing, i) => (
+              <VendorListingCard
+                imageUrl={listing.imageUrl}
+                title={listing.title}
+                location={listing.location}
+                dateAdded={listing.dateAdded}
+                status={listing.status}
+                key={i}
+              />
+            ))}
           </div>
         </div>
       </div>

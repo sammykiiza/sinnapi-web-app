@@ -25,3 +25,18 @@ export type VendorCategory =
 export type FileUPloaderProps = {
   defaultImage?: string
 } & ComponentProps<"div">
+
+export interface ListingsData {
+  imageUrl: string
+  title: string
+  location: string
+  dateAdded: string
+  status: ListingStatus
+}
+
+export type ListingStatus =
+  | "Pending"
+  | "Publish"
+  | "Draft"
+  | "Awaiting Approval"
+  | "Removed"

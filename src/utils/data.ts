@@ -1,5 +1,9 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import { TopEventsLisitingsCardProps, TopEventsVendorsCardProps } from "./types"
+import {
+  ListingsData,
+  TopEventsLisitingsCardProps,
+  TopEventsVendorsCardProps,
+} from "./types"
 
 export const topEventsVendors: TopEventsVendorsCardProps[] = [
   {
@@ -112,4 +116,42 @@ export const ratingSelectDropDown = [{ value: "top-rated", label: "Top Rated" }]
 export const selectBoxCategories = [
   { value: "photography", label: "Photography" },
   { value: "decoration", label: "Decoration" },
+]
+
+export const listingsData: ListingsData[] = [
+  {
+    imageUrl: "/images/vendor/listings/listing-1.jpg",
+    title: "Muliika Events Photography",
+    location: "Kampala",
+    dateAdded: "January 18, 2023",
+    status: "Pending",
+  },
+  {
+    imageUrl: "/images/vendor/listings/listing-2.jpg",
+    title: "KML Car Hire Services",
+    location: "Fort Portal",
+    dateAdded: "March 20, 2023",
+    status: "Publish",
+  },
+  {
+    imageUrl: "/images/vendor/listings/listing-3.jpg",
+    title: "Kavumba Recreation",
+    location: "Wakiso",
+    dateAdded: "April 15, 2023",
+    status: "Draft",
+  },
+  {
+    imageUrl: "/images/vendor/listings/listing-4.jpg",
+    title: "Eternal Spark Jewels",
+    location: "Kabale",
+    dateAdded: "May 27, 2023",
+    status: "Awaiting Approval",
+  },
+  {
+    imageUrl: "/images/vendor/listings/listing-5.jpg",
+    title: "Sugar Bliss Confectionary",
+    location: "Wakiso",
+    dateAdded: "June 13, 2023",
+    status: "Removed",
+  },
 ]
