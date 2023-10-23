@@ -1,10 +1,12 @@
-import React from "react"
+import React, { ComponentProps } from "react"
 import CustomIcon from "./icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
-function RatingComponent() {
+type RatingComponentProps = ComponentProps<"div">
+
+function RatingComponent(props: RatingComponentProps) {
   return (
-    <div>
+    <div className={props.className}>
       {[1, 2, 3, 4].map((element, i) => (
         <CustomIcon
           type={"faStar" as unknown as IconDefinition}

@@ -108,6 +108,27 @@ function SideBarDashboard() {
             </Link>
           </div>
         )}
+        {userType === "vendor" && (
+          <div>
+            <Link
+              to={"/vendor/reviews"}
+              className={
+                (currentUrl === "/vendor/reviews"
+                  ? "text-theme_secondary"
+                  : "") + " flex flex-row space-x-3 hover:text-theme_secondary"
+              }
+              onClick={() => dispatch(setIsOpen(false))}
+            >
+              <div>
+                <CustomIcon
+                  type={"faStar" as unknown as IconDefinition}
+                  className="text-theme_secondary text-lg"
+                />
+              </div>
+              <div className="text-sm">Reviews</div>
+            </Link>
+          </div>
+        )}
         <div>
           <Link
             to={
@@ -134,27 +155,6 @@ function SideBarDashboard() {
             <div className="text-sm">My Profile</div>
           </Link>
         </div>
-        {userType === "vendor" && (
-          <div>
-            <Link
-              to={"/vendor/reviews"}
-              className={
-                (currentUrl === "/vendor/reviews"
-                  ? "text-theme_secondary"
-                  : "") + " flex flex-row space-x-3 hover:text-theme_secondary"
-              }
-              onClick={() => dispatch(setIsOpen(false))}
-            >
-              <div>
-                <CustomIcon
-                  type={"faStar" as unknown as IconDefinition}
-                  className="text-theme_secondary text-lg"
-                />
-              </div>
-              <div className="text-sm">Reviews</div>
-            </Link>
-          </div>
-        )}
         <div>
           <Link
             to={"/"}
