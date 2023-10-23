@@ -1,10 +1,22 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
-import React, { ComponentProps } from "react"
+import React, { ComponentProps, useEffect, useRef, useState } from "react"
 import CustomIcon from "./icons/CustomIcon"
 import { ListingsData } from "../../utils/types"
 type VendorListingCardProps = ListingsData & ComponentProps<"div">
 
 function VendorListingCard(props: VendorListingCardProps) {
+  const [toggleEditMenu, setToggleEditMenu] = useState(false)
+  const actionDiv = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: React.MouseEvent & React.TouchEvent) => {
+      if (!actionDiv.current?.contains(e.target as unknown as any)) {
+        setToggleEditMenu(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handler as unknown as any)
+  })
   return (
     <div
       className={
@@ -54,11 +66,40 @@ function VendorListingCard(props: VendorListingCardProps) {
         </span>
       </div>
       <div className="md:justify-self-center flex flex-col text-xs text-gray-400">
-        <span>Action</span>
+        <span onClick={() => setToggleEditMenu(!toggleEditMenu)}>Action</span>
         <CustomIcon
           type={"faEllipsis" as unknown as IconDefinition}
           className="border border-gray-500 hover:border-theme_secondary rounded cursor-pointer hover:text-theme_secondary text-base"
+          onClick={() => setToggleEditMenu(!toggleEditMenu)}
         />
+        <div
+          className={
+            (toggleEditMenu === false ? "hidden" : "flex") +
+            " flex-col gap-y-1 bg-white absolute text-theme_black shadow-lg mt-10 md:-ml-10"
+          }
+          ref={actionDiv}
+        >
+          <div className="flex flex-row gap-x-2 items-center hover:bg-theme_secondary w-full px-2 cursor-pointer py-1">
+            <CustomIcon type={"faPenToSquare" as unknown as IconDefinition} />
+            <span>Edit</span>
+          </div>
+          <div className="flex flex-row gap-x-2 items-center hover:bg-theme_secondary w-full px-2 cursor-pointer py-1">
+            <CustomIcon type={"faEye" as unknown as IconDefinition} />
+            <span>Preview</span>
+          </div>
+          <div className="flex flex-row gap-x-2 items-center hover:bg-theme_secondary w-full px-2 cursor-pointer py-1">
+            <CustomIcon type={"faCopy" as unknown as IconDefinition} />
+            <span>Duplicate</span>
+          </div>
+          <div className="flex flex-row gap-x-2 items-center hover:bg-theme_secondary w-full px-2 cursor-pointer py-1">
+            <CustomIcon type={"faPaperPlane" as unknown as IconDefinition} />
+            <span>Publish</span>
+          </div>
+          <div className="flex flex-row gap-x-2 items-center hover:bg-theme_secondary w-full px-2 cursor-pointer py-1">
+            <CustomIcon type={"faTrashCan" as unknown as IconDefinition} />
+            <span>Removed</span>
+          </div>
+        </div>
       </div>
     </div>
   )
