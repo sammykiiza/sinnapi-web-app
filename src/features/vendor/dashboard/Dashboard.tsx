@@ -1,6 +1,3 @@
-import React from "react"
-import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 import FileUploaderWide from "../../../layouts/reusables/file-uploaders/FileUploaderWide"
 import { listingsData } from "../../../utils/data"

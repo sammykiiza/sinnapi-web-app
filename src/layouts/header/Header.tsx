@@ -57,7 +57,7 @@ function Header() {
             <img
               src={logo}
               alt="sinnapi"
-              className="max-w-[150%] xl:max-w-[100%]"
+              className="max-w-[180%] md:max-w-[150%] xl:max-w-[100%]"
             />
           </Link>
         </div>
@@ -74,7 +74,7 @@ function Header() {
               name="vendor-category"
             />
           </div>
-          <div className="flex flex-row w-full">
+          <div className="flex flex-row w-[160%] md:w-full">
             <ReactSelect
               options={vendorCategoriesSelectData}
               placeholder={
