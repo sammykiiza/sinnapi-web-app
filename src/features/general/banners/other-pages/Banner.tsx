@@ -7,28 +7,33 @@ type BannerProps = { pageTitle: string } & ComponentProps<"div">
 
 function Banner(props: BannerProps) {
   return (
-    <div className="bg-center bg-cover bg-[url('/images/general/banner/background.jpg')] bg-opacity-10 h-[200px] flex flex-row justify-center items-end">
-      <div className="flex justify-between justify-self-center bg-white items-center py-1 w-full mx-4 lg:mx-20 xl:mx-80 px-4 -mb-6 rounded shadow max-w-7xl">
-        <div className="flex space-x-2 items-center">
-          <Link to={"/"}>
+    <div className="bg-center bg-cover bg-[url('/images/general/banner/background.jpg')] bg-opacity-10 h-[200px]">
+      <div className="flex flex-col justify-end items-center mx-auto h-full px-2 xl:px-32 max-w-7xl">
+        <h1 className="flex w-full text-white text-3xl font-theme_secondary_bold items-start justify-self-center mb-12 capitalize">
+          {props.pageTitle}
+        </h1>
+        <div className="flex justify-between justify-self-center bg-white items-center py-1 w-full px-4 -mb-6 rounded shadow-lg">
+          <div className="flex space-x-2 items-center">
+            <Link to={"/"}>
+              <CustomIcon
+                type={"faHome" as unknown as IconDefinition}
+                className="text-theme_black text-sm"
+              />
+            </Link>
             <CustomIcon
-              type={"faHome" as unknown as IconDefinition}
-              className="text-theme_black text-sm"
+              type={"faChevronRight" as unknown as IconDefinition}
+              className="text-gray-400 text-xs"
             />
-          </Link>
-          <CustomIcon
-            type={"faChevronRight" as unknown as IconDefinition}
-            className="text-gray-400 text-xs"
-          />
-          <p className="text-theme_secondary font-theme_secondary_bold text-sm">
-            {props.pageTitle}
-          </p>
-        </div>
-        <div>
-          <CustomIcon
-            type={"faAppleWhole" as unknown as IconDefinition}
-            className="text-theme_secondary text-lg"
-          />
+            <p className="text-theme_secondary font-theme_secondary_bold text-sm">
+              {props.pageTitle}
+            </p>
+          </div>
+          <div>
+            <CustomIcon
+              type={"faAppleWhole" as unknown as IconDefinition}
+              className="text-theme_secondary text-lg"
+            />
+          </div>
         </div>
       </div>
     </div>

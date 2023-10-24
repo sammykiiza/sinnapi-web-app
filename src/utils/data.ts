@@ -16,7 +16,7 @@ export const topEventsVendors: TopEventsVendorsCardProps[] = [
     imageUrl: "/images/home/events-vendors/decoration.jpg",
     vendorCategory: "Decoration",
     vendorLocation: "Kampala",
-    iconName: "faCamera" as unknown as IconDefinition,
+    iconName: "faWandSparkles" as unknown as IconDefinition,
   },
   {
     imageUrl: "/images/home/events-vendors/venue.jpg",
@@ -36,13 +36,25 @@ export const topEventsVendors: TopEventsVendorsCardProps[] = [
     vendorLocation: "Kampala",
     iconName: "faCar" as unknown as IconDefinition,
   },
+  {
+    imageUrl: "/images/home/events-vendors/cakes.jpg",
+    vendorCategory: "Cakes",
+    vendorLocation: "Tororo",
+    iconName: "faCakeCandles" as unknown as IconDefinition,
+  },
+  {
+    imageUrl: "/images/home/events-vendors/wedding-gowns.jpg",
+    vendorCategory: "Wedding Gowns",
+    vendorLocation: "Kabale",
+    iconName: "faCrown" as unknown as IconDefinition,
+  },
+  {
+    imageUrl: "/images/home/events-vendors/music-systems.jpg",
+    vendorCategory: "Music Systems",
+    vendorLocation: "Kampala",
+    iconName: "faRecordVinyl" as unknown as IconDefinition,
+  },
 ]
-// {
-//   imageUrl: "/images/home/events-vendors/car-hire-services.jpg",
-//   vendorCategory: "Car Hire Services",
-//   vendorLocation: "Kampala",
-//   iconName: "faCar" as unknown as IconDefinition,
-// },
 
 export const topEventsListings: TopEventsLisitingsCardProps[] = [
   {

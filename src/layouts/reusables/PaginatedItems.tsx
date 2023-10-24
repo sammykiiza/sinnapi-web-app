@@ -22,8 +22,8 @@ function PaginatedItems({ itemsPerPage }: { itemsPerPage: number }) {
       <div
         className={
           listView
-            ? `grid grid-rows-3 space-y-4 px-6 row-span-1 justify-self-start w-8/12`
-            : `grid grid-cols-1 space-y-4 sm:grid-cols-2 md:grid-cols-3 space-x-4 px-6`
+            ? `grid grid-rows-3 px-6 row-span-1 justify-self-start w-8/12`
+            : `grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 space-x-4 px-6`
         }
       >
         {currentItems.map((listing, i) => (

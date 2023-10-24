@@ -21,7 +21,7 @@ function WelcomeToSinnapi() {
           Take a tour to find your favourite vendor and listing
         </p>
         <button
-          onClick={() => navigate("/listing-with-map")}
+          onClick={() => navigate("/vendors")}
           className="hover:bg-theme_primary bg-theme_secondary rounded-md text-white text-[11px] px-2 py-1"
         >
           Find Vendor

@@ -21,6 +21,9 @@ export type VendorCategory =
   | "Jewellers"
   | "Suits"
   | "Fashion"
+  | "Cakes"
+  | "Wedding Gowns"
+  | "Music Systems"
 
 export type FileUPloaderProps = {
   defaultImage?: string

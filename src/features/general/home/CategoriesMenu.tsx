@@ -8,7 +8,7 @@ import { faMusic } from "@fortawesome/free-solid-svg-icons/faMusic"
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser"
 import { faUserTie } from "@fortawesome/free-solid-svg-icons/faUserTie"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useAppDispatch } from "../../../app/hooks"
 import {
@@ -18,7 +18,10 @@ import {
 
 function CategoriesMenu() {
   const dispatch = useAppDispatch()
-  dispatch(setDashboard(false))
+  useEffect(() => {
+    dispatch(setDashboard(false))
+  })
+
   return (
     <div className="flex flex-col gap-y-2 text-theme_black font-theme_secondary_bold text-sm m-4">
       <div>

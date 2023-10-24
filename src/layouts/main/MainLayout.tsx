@@ -24,7 +24,6 @@ function MainLayout() {
       <div>
         <Outlet />
       </div>
-      {/* {!useLocation().pathname.match(/^\/listing-with-map.*$/gim) && <Footer />} */}
       {showFooterVariable && <Footer />}
       <BottomFooter />
     </div>

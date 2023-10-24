@@ -14,8 +14,19 @@ function TopEventsVendors() {
           Premier Event Suppliers
         </p>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 content-center justify-items-center px-2 gap-x-2 gap-y-2 md:gap-y-2 md:px-4 xl:px-16 w-full max-w-7xl mx-auto">
-        {topEventsVendors.map((vendor, i) => (
+      <div className="hidden lg:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 content-center justify-items-center px-2 gap-x-2 gap-y-2 md:gap-y-2 md:px-4 xl:px-16 w-full max-w-7xl mx-auto">
+        {topEventsVendors.slice(0, 5).map((vendor, i) => (
+          <TopEventsVendorsCard
+            imageUrl={vendor.imageUrl}
+            iconName={vendor.iconName}
+            vendorCategory={vendor.vendorCategory}
+            vendorLocation={vendor.vendorLocation}
+            key={i}
+          />
+        ))}
+      </div>
+      <div className="grid lg:hidden grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 content-center justify-items-center px-2 gap-x-2 gap-y-2 md:gap-y-2 md:px-4 xl:px-16 w-full max-w-7xl mx-auto">
+        {topEventsVendors.slice(0, 4).map((vendor, i) => (
           <TopEventsVendorsCard
             imageUrl={vendor.imageUrl}
             iconName={vendor.iconName}
@@ -27,7 +38,7 @@ function TopEventsVendors() {
       </div>
       <div className="self-center xl:mt-8">
         <button
-          onClick={() => navigate("/listing-with-map")}
+          onClick={() => navigate("/vendors")}
           className="bg-white hover:bg-theme_primary rounded-full text-xs font-theme_secondary_bold text-theme_secondary hover:text-white p-3 ease-linear duration-100"
         >
           View More Vendors

@@ -17,10 +17,10 @@ function TopEventsVendorsCard(props: TopEventsVendorsCardProps) {
             View Details
           </div>
         </div>
-        <div className="bg-gray-300 rounded-b py-6 pl-4">
+        <div className="flex flex-col bg-gray-300 rounded-b py-6 pl-4 pr-2">
           <CustomIcon
             type={props.iconName}
-            className="text-2xl sm:text-3xl text-white bg-theme_secondary p-3 rounded-full max-[374px]:ml-20 max-[424px]:text-xl max-[424px]:-mt-10 max-[424px]:ml-24 max-[300px]:hidden absolute ml-28 lg:ml-32 -mt-10"
+            className="self-end text-2xl sm:text-3xl text-white bg-theme_secondary p-3 rounded-full max-[424px]:text-xl max-[300px]:hidden absolute -mt-10"
           />
           <p className="font-theme_secondary_bold text-sm">
             {props.vendorCategory}

@@ -4,7 +4,7 @@ import Banner from "../banners/other-pages/Banner"
 function Login() {
   return (
     <div className="grid grid-rows-2">
-      <div className="col-span-1">
+      <div className="row-span-1">
         <Banner pageTitle="Login" />
       </div>
       <form className="grid grid-cols-1 gap-y-4 -mt-8 pb-14 text-center justify-items-center max-w-7xl mx-auto">
@@ -35,7 +35,7 @@ function Login() {
         <div className="flex text-sm">
           <p>Are you a Customer?</p>
           <Link
-            to={"/"}
+            to={"/customer-signup"}
             className="hover:text-theme_primary text-theme_secondary"
           >
             Join now
@@ -44,7 +44,7 @@ function Login() {
         <div className="flex text-sm">
           <p>Are you a Vendor?</p>
           <Link
-            to={"/"}
+            to={"/vendor-signup"}
             className="hover:text-theme_primary text-theme_secondary"
           >
             Join now
