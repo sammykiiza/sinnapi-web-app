@@ -3,12 +3,18 @@ import { Outlet } from "react-router-dom"
 import Footer from "../footer/Footer"
 import BottomFooter from "../footer/BottomFooter"
 import SideBarDashboard from "../sidebars/dashboards/SideBarDashboard"
-import { useAuth } from "../../services/auth/useAuth"
+import { useEffect, useState } from "react"
 
 function DashboardLayout() {
-  // useAuth()
-  const userTypeLocaStorage = localStorage.getItem("userType")
-  const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
+  const [userType, setUserType] = useState("customer")
+  useEffect(() => {
+    const userTypeLocaStorage = localStorage.getItem("userType")
+
+    userTypeLocaStorage
+      ? setUserType(userTypeLocaStorage)
+      : setUserType("customer")
+  }, [])
+
   return (
     <div
       className={

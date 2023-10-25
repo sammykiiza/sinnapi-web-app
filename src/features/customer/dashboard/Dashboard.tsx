@@ -5,7 +5,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
 function Dashboard() {
   return (
-    <div className="flex flex-col justify-center space-y-4 lg:px-20 w-full">
+    <div className="flex flex-col justify-center space-y-4 mb-6 lg:px-20 w-full">
       <div className="lg:rounded bg-white shadow-xl">
         <img
           src="/images/customer/dashboard/banner.jpg"
@@ -72,7 +72,7 @@ function Dashboard() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-white shadow-xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-white rounded-md drop-shadow-xl">
         <div className="relative rounded-md grid">
           <CustomIcon
             type={"faPenToSquare" as unknown as IconDefinition}

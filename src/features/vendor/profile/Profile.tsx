@@ -12,20 +12,10 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import { setSocialMedia } from "../vendorSlice"
 
 function Profile() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
-  const mapPositionFromCache = useAppSelector((state) => state.map.LatLng)
-  const socialMediaData = useAppSelector((state) => state.vendor.SocailMedia)
   const [toggleSocialMediaAddForm, setToggleSocialMediaAddForm] =
     useState(false)
+  const mapPositionFromCache = useAppSelector((state) => state.map.LatLng)
+  const socialMediaData = useAppSelector((state) => state.vendor.SocailMedia)
   const [socialMediaTitle, setSocialMediaTitle] = useState("")
   const [socialMediaLink, setSocialMediaLink] = useState("")
   const dispatch = useAppDispatch()
@@ -36,6 +26,16 @@ function Profile() {
     }
     dispatch(setSocialMedia(socialMediaAddition))
   }
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      setScreenWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", updateScreenWidth)
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth)
+    }
+  }, [screenWidth])
   return (
     <div className="space-y-12">
       <h1 className="text-3xl px-2 lg:px-0 text-theme_primary font-theme_secondary_bold">

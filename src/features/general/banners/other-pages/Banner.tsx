@@ -24,7 +24,7 @@ function Banner(props: BannerProps) {
               type={"faChevronRight" as unknown as IconDefinition}
               className="text-gray-400 text-xs"
             />
-            <p className="text-theme_secondary font-theme_secondary_bold text-sm">
+            <p className="text-theme_secondary font-theme_secondary_bold text-sm capitalize">
               {props.pageTitle}
             </p>
           </div>

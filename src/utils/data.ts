@@ -167,3 +167,16 @@ export const listingsData: ListingsData[] = [
     status: "Removed",
   },
 ]
+
+export const clientVendorManagerVendorsData = [
+  {
+    imageUrl: "/images/customer/dashboard/vendor-manager/event-1.jpg",
+    vendorName: "Events MC",
+    vendorLocation: "Kampala",
+  },
+  {
+    imageUrl: "/images/customer/dashboard/vendor-manager/event-2.jpg",
+    vendorName: "Gina's Bakery",
+    vendorLocation: "Wakiso",
+  },
+]
