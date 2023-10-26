@@ -10,6 +10,10 @@ export const GeneralRoutes = [
     component: GeneralComponents.VendorListings.ListingWithMap,
   },
   {
+    path: "/listing-singular",
+    component: GeneralComponents.VendorListings.ListingSingular,
+  },
+  {
     path: "/vendors",
     component: GeneralComponents.Vendors,
   },

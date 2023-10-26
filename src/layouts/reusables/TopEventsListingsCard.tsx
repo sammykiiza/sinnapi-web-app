@@ -7,7 +7,7 @@ import { TopEventsLisitingsCardProps } from "../../utils/types"
 
 function TopEventsListingsCard(props: TopEventsLisitingsCardProps) {
   return (
-    <Link to={"/"}>
+    <Link to={"/listing-singular"}>
       <div className="rounded">
         <div className="group">
           <div className="flex flex-row font-theme_secondary_light justify-between items-center px-1 absolute transition-all ease-in duration-200 group-hover:space-x-0 lg:space-x-4 mt-2">

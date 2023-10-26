@@ -180,3 +180,8 @@ export const clientVendorManagerVendorsData = [
     vendorLocation: "Wakiso",
   },
 ]
+
+export const sortingByData = [
+  { value: "highest", label: "Rating: Highest" },
+  { value: "lowest", label: "Rating: Lowest" },
+]

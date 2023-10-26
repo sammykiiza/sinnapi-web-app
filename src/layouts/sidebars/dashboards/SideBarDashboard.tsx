@@ -1,19 +1,25 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import React, { useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import CustomIcon from "../../reusables/icons/CustomIcon"
 import { useAppDispatch } from "../../../app/hooks"
 import { setDashboard, setIsOpen } from "../sideBarsSlice"
 
 function SideBarDashboard() {
   const dispatch = useAppDispatch()
+  const currentUrl = useLocation().pathname
+  const navigate = useNavigate()
 
   useEffect(() => {
     dispatch(setDashboard(true))
   })
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedIn")
+    navigate("/")
+  }
   const userTypeLocaStorage = localStorage.getItem("userType")
   const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
-  const currentUrl = useLocation().pathname
   return (
     <div className={"w-full lg:w-60 space-y-4 flex flex-col items-center"}>
       <div className="space-y-2">
@@ -156,11 +162,8 @@ function SideBarDashboard() {
           </Link>
         </div>
         <div>
-          <Link
-            to={"/"}
-            onClick={() => {
-              localStorage.removeItem("loggedIn")
-            }}
+          <div
+            onClick={handleLogout}
             className="flex flex-row space-x-3 text-red-600 hover:text-theme_primary cursor-pointer"
           >
             <div>
@@ -170,7 +173,7 @@ function SideBarDashboard() {
               />
             </div>
             <div>Logout</div>
-          </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,3 @@
-import { useLocation, useNavigate } from "react-router-dom"
-import { useEffect } from "react"
-
 export const checkAuth = (): boolean => {
   const loggedIn = localStorage.getItem("loggedIn")
   if (loggedIn) {
@@ -13,13 +10,13 @@ export const checkAuth = (): boolean => {
   return false
 }
 
-export const useAuth = () => {
-  const navigate = useNavigate()
-  const location = useLocation()
+// export const useAuth = () => {
+//   const navigate = useNavigate()
+//   const location = useLocation()
 
-  useEffect(() => {
-    if (!checkAuth()) {
-      navigate("/login", { state: { from: location } })
-    }
-  }, [location, navigate])
-}
+//   useEffect(() => {
+//     if (!checkAuth()) {
+//       navigate("/login", { state: { from: location } })
+//     }
+//   }, [location, navigate])
+// }

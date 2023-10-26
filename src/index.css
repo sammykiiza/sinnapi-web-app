@@ -4,25 +4,25 @@
 .select-categories__control {
   @apply rounded-r-none !important;
 }
-.select-categories-vendor-signup__control, .select-district__control, .select-listing__control, .select-vendor-manager__control {
+.select-categories-vendor-signup__control, .select-district__control, .select-listing__control, .select-vendor-manager__control, .select-sorting__control {
   @apply bg-gray-100 border-gray-300 rounded !important; 
 }
-.select-categories-vendor-signup__placeholder, .select-district__placeholder, .select-listing__placeholder, .select-vendor-manager__placeholder {
+.select-categories-vendor-signup__placeholder, .select-district__placeholder, .select-listing__placeholder, .select-vendor-manager__placeholder, .select-sorting__placeholder {
   @apply text-left text-xs text-gray-400 !important;
 }
 .select-location__control, .select-listing__control {
   @apply rounded-none !important;
 }
-.select-categories__indicator-separator, .select-location__indicator-separator, .select-categories-vendor-signup__indicator-separator, .select-district__indicator-separator, .select-listing__indicator-separator,.select-vendor-manager__indicator-separator  {
+.select-categories__indicator-separator, .select-location__indicator-separator, .select-categories-vendor-signup__indicator-separator, .select-district__indicator-separator, .select-listing__indicator-separator,.select-vendor-manager__indicator-separator, .select-sorting__indicator-separator  {
 @apply hidden !important;
 }
-.select-categories__dropdown-indicator svg, .select-location__dropdown-indicator svg, .select-district__dropdown-indicator svg, .select-listing__dropdown-indicator svg, .select-vendor-manager__dropdown-indicator svg {
+.select-categories__dropdown-indicator svg, .select-location__dropdown-indicator svg, .select-district__dropdown-indicator svg, .select-listing__dropdown-indicator svg, .select-vendor-manager__dropdown-indicator svg, .select-sorting__dropdown-indicator svg {
   @apply text-gray-400 !important;
 }
-.select-categories__menu-list, .select-location__menu-list, .select-categories-vendor-signup__menu-list, .select-district__menu-list, .select-listing__menu-list, .select-vendor-manager__menu-list {
+.select-categories__menu-list, .select-location__menu-list, .select-categories-vendor-signup__menu-list, .select-district__menu-list, .select-listing__menu-list, .select-vendor-manager__menu-list, .select-sorting__menu-list {
   @apply text-theme_secondary rounded-md !important;
 }
-.select-categories__option--is-selected, .select-location__option--is-selected, .select-categories-vendor-signup__option--is-selected, .select-district__option--is-selected, .select-listing__option--is-selected, .select-vendor-manager__option--is-selected {
+.select-categories__option--is-selected, .select-location__option--is-selected, .select-categories-vendor-signup__option--is-selected, .select-district__option--is-selected, .select-listing__option--is-selected, .select-vendor-manager__option--is-selected, .select-sorting__option--is-selected {
   @apply bg-theme_secondary text-white !important;
 }
 .select-categories-vendor-signup__menu {
@@ -77,19 +77,42 @@ ul.pagination>li.selected {
 .tox .tox-statusbar {
   @apply hidden !important;
 }
+#listing-singular-navigation a.active {
+  @apply text-theme_secondary;
+}
+.DatePicker{
+  @apply w-full;
+}
+.DatePicker__input {
+  @apply w-full rounded bg-gray-100 border border-gray-200 font-theme_secondary_light text-gray-500 placeholder:text-gray-500 text-left text-sm focus:outline-none focus:ring-0 focus:border-gray-200 !important;
+}
+.Calendar {
+  @apply shadow-none font-theme_secondary_bold;
+}
+.custom-calendar{
+  @apply w-full;
+}
+.custom-calendar .Calendar__header {
+  @apply rounded bg-gray-100 text-theme_black font-theme_secondary_bold h-8;
+}
+.custom-calendar .Calendar__weekDays {
+  @apply font-theme_secondary_bold text-theme_black mt-6;
+}
+.custom-calendar .Calendar__day.-selectedBetween {
+  @apply text-white;
+}
+.custom-calendar .Calendar__day.-ltr.-selectedStart, .Calendar__day.-ltr.-selectedEnd {
+  @apply rounded-none;
+}
+.custom-calendar .Calendar__weekRow {
+  @apply gap-x-1;
+}
+.custom-calendar {
+  @apply text-[9px];
+}
 @tailwind utilities;
 
-.dashboard-customer {
-  background: linear-gradient(
-    to bottom,
-    theme(colors.gray.100) 0%,
-    theme(colors.gray.100) 25%,
-    theme(colors.white) 25%,
-    theme(colors.white) 100%
-  );
-}
-
-.dashboard-vendor {
+.dashboard {
   background: linear-gradient(
     to bottom,
     theme(colors.gray.100) 0%,
@@ -98,6 +121,7 @@ ul.pagination>li.selected {
     theme(colors.white) 100%
   );
 }
+
 div.tox-promotion {
   display: none !important;
 }
