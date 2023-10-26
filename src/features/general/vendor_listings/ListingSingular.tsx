@@ -22,7 +22,7 @@ function ListingSingular() {
   const [videoPlaying, setVideoPlaying] = useState(false)
   const videoRef = useRef<any>(null)
   return (
-    <div className="">
+    <div className="w-full overflow-x-hidden">
       <div className="grid grid-cols-4 place-content-center">
         <div className="hidden md:block col-span-1">
           <img
@@ -99,7 +99,7 @@ function ListingSingular() {
           </div>
           <div
             id="listing-singular-navigation"
-            className="grid grid-cols-2 gap-y-2 md:grid-cols-12 md:gap-x-10 py-4 px-4 rounded-lg bg-white w-full shadow-xl -mb-6"
+            className="grid grid-cols-2 gap-y-2 md:grid-cols-6 xl:grid-cols-12 md:gap-x-10 py-4 px-4 rounded-lg bg-white w-full shadow-xl md:-mb-6"
           >
             <Link
               to={"#description"}
