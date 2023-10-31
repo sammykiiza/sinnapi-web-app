@@ -8,19 +8,10 @@ import Slider from "../../../layouts/reusables/Slider"
 import PaginatedItems from "../../../layouts/reusables/PaginatedItems"
 import CustomIcon from "../../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import { useEffect, useState } from "react"
+import { useWindowSize } from "../../../utils/hooks/useWindowSize"
 
 function ListingWithMap() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
+  const { width: screenWidth } = useWindowSize()
   return (
     <div className="grid grid-cols-1 xl:grid-cols-5 w-full">
       <div className="xl:col-span-3">

@@ -10,26 +10,26 @@ export default function Carousel({
 }) {
   let [current, setCurrent] = useState(0)
 
-  let previousSlide = () => {
-    const isFirstSlide = current === 0
-    const newIndex = isFirstSlide ? slides.length - 1 : current - 1
-    setCurrent(newIndex)
-  }
-
   let nextSlide = useCallback(() => {
     const isLastSlide = current === slides.length - 1
     const newIndex = isLastSlide ? 0 : current + 1
     setCurrent(newIndex)
   }, [current, slides.length])
 
-  const goToSlide = (slideIndex: number) => {
-    setCurrent(slideIndex)
-  }
-
   useEffect(() => {
     const runNextSlide = setTimeout(() => nextSlide(), 2000)
     return () => clearTimeout(runNextSlide)
   }, [nextSlide])
+
+  let previousSlide = () => {
+    const isFirstSlide = current === 0
+    const newIndex = isFirstSlide ? slides.length - 1 : current - 1
+    setCurrent(newIndex)
+  }
+
+  const goToSlide = (slideIndex: number) => {
+    setCurrent(slideIndex)
+  }
 
   return (
     <div className="overflow-hidden relative xl:h-96 rounded-none xl:rounded-md">

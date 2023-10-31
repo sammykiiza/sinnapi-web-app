@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import ReactSelect from "react-select"
 import logo from "/images/header/logo/sinnapi.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -11,35 +11,21 @@ import { vendorCategoriesSelectData } from "../../utils/data"
 import CustomIcon from "../reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import SideBarDashboardMobile from "../sidebars/dashboards/SideBarDashboardMobile"
+import { useWindowSize } from "../../utils/hooks/useWindowSize"
+import { useOnClickOutside } from "usehooks-ts"
 
 function Header() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
-
+  const { width: screenWidth } = useWindowSize()
   const [isDropDownOpen, setIsDropDownOpen] = useState(false)
   const location = useLocation().pathname
   const checkDashboardPath = (): boolean => {
     return location.includes("/customer") || location.includes("/vendor")
   }
   const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const handler = (e: React.MouseEvent & React.TouchEvent) => {
-      if (!ref.current?.contains(e.target as unknown as any)) {
-        setIsDropDownOpen(false)
-      }
-    }
-
-    document.addEventListener("mousedown", handler as unknown as any)
-  })
+  const handler = () => {
+    setIsDropDownOpen(false)
+  }
+  useOnClickOutside(ref, handler)
   return (
     <div className="bg-theme_primary py-4">
       <div className="container grid grid-rows-2 grid-cols-12 px-2 lg:grid-rows-1 xl:gap-x-2 items-center max-w-6xl mx-auto">

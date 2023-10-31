@@ -1,22 +1,14 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import CustomIcon from "../../../../layouts/reusables/icons/CustomIcon"
 import { Tab } from "@headlessui/react"
 import { listingsData } from "../../../../utils/data"
 import VendorListingCard from "../../../../layouts/reusables/VendorListingCard"
 import { ListingsData } from "../../../../utils/types"
+import { useWindowSize } from "../../../../utils/hooks/useWindowSize"
 
 function MyListings() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
+  const { width: screenWidth } = useWindowSize()
   const filterListingsByStatusPending = (array: ListingsData) => {
     return array.status === "Pending"
   }

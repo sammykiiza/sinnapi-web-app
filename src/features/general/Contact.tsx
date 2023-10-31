@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react"
 import Map from "../../layouts/reusables/map/Map"
 import CustomIcon from "../../layouts/reusables/icons/CustomIcon"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { useWindowSize } from "../../utils/hooks/useWindowSize"
 
 function Contact() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
+  const { width: screenWidth } = useWindowSize()
   return (
     <div className="grid grid-rows-2">
       <Map key={screenWidth} className="-z-50" height={400} />

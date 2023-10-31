@@ -1,21 +1,23 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import CustomIcon from "../../reusables/icons/CustomIcon"
 import { useAppDispatch } from "../../../app/hooks"
 import { setDashboard, setIsOpen } from "../sideBarsSlice"
 
 function SideBarDashboard() {
+  const [currentUrl, setcurrentUrl] = useState("")
   const dispatch = useAppDispatch()
-  const currentUrl = useLocation().pathname
   const navigate = useNavigate()
-
+  const pathName = useLocation().pathname
   useEffect(() => {
     dispatch(setDashboard(true))
-  })
+    setcurrentUrl(pathName)
+  }, [dispatch, pathName])
 
   const handleLogout = () => {
-    localStorage.removeItem("loggedIn")
+    localStorage.setItem("loggedIn", "false")
+    localStorage.removeItem("userType")
     navigate("/")
   }
   const userTypeLocaStorage = localStorage.getItem("userType")

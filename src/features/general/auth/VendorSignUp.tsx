@@ -4,12 +4,14 @@ import SelectBox from "../../../layouts/reusables/SelectBox"
 import { selectBoxCategories } from "../../../utils/data"
 import airtel from "/images/general/auth/vendor-signup/Airtel.png"
 import mtn from "/images/general/auth/vendor-signup/MTN.png"
-import { setUserType, authState } from "../../../services/auth/authSlice"
-import { useAppDispatch } from "../../../app/hooks"
 
 function VendorSignUp() {
-  const dispatch = useAppDispatch()
   const navigate = useNavigate()
+  const handleSignUp = () => {
+    localStorage.setItem("loggedIn", "true")
+    localStorage.setItem("userType", "vendor")
+    navigate("/vendor")
+  }
   return (
     <div className="grid grid-rows-[repeat(auto-fill,minmax(300px,1fr))]">
       <div className="col-span-1 row-span-1">
@@ -123,13 +125,10 @@ function VendorSignUp() {
           </p>
         </div>
         <button
-          onClick={() => {
-            localStorage.setItem("loggedIn", "true")
-            dispatch(
-              setUserType({ userType: "vendor" } as unknown as authState),
-            )
-            localStorage.setItem("userType", "vendor")
-            navigate("/vendor")
+          type="submit"
+          onClick={(e) => {
+            e.preventDefault()
+            handleSignUp()
           }}
           className="col-span-2 text-white px-20 py-2 mx-auto rounded-md bg-theme_secondary hover:bg-theme_primary font-theme_secondary_bold text-sm"
         >

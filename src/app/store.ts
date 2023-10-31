@@ -2,7 +2,6 @@ import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import counterReducer from "../features/counter/counterSlice"
 import mainLayoutReducer from "../layouts/main/mainLayoutSlice"
 import sideBarsSlice from "../layouts/sidebars/sideBarsSlice"
-import authSlice from "../services/auth/authSlice"
 import mapSlice from "../layouts/reusables/map/mapSlice"
 import vendorSlice from "../features/vendor/vendorSlice"
 
@@ -11,7 +10,6 @@ export const store = configureStore({
     counter: counterReducer,
     mainLayout: mainLayoutReducer,
     sideBar: sideBarsSlice,
-    auth: authSlice,
     map: mapSlice,
     vendor: vendorSlice,
   },

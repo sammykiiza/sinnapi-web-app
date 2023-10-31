@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Tab } from "@headlessui/react"
 import FileUploaderCircleWithText from "../../../layouts/reusables/file-uploaders/FileUploaderCircleWithText"
 import Wysiwyg from "../../../layouts/reusables/wysiwyg/Wysiwyg"
@@ -10,25 +10,21 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import Map from "../../../layouts/reusables/map/Map"
 import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import { setSocialMedia } from "../vendorSlice"
+import { useWindowSize } from "usehooks-ts"
 
 function Profile() {
-  const [socialMediaTitle, setSocialMediaTitle] = useState("")
-  const [socialMediaLink, setSocialMediaLink] = useState("")
+  const socialMediaData = useAppSelector((state) => state.vendor.SocailMedia)
+  const [socialMediaTitle, setSocialMediaTitle] = useState(
+    socialMediaData[0].title,
+  )
+  const [socialMediaLink, setSocialMediaLink] = useState(
+    socialMediaData[0].link,
+  )
   const [toggleSocialMediaAddForm, setToggleSocialMediaAddForm] =
     useState(false)
-  const [screenWidth, setScreenWidth] = useState(window.outerWidth)
-  const socialMediaData = useAppSelector((state) => state.vendor.SocailMedia)
+  const { width: screenWidth } = useWindowSize()
   const mapPositionFromCache = useAppSelector((state) => state.map.LatLng)
   const dispatch = useAppDispatch()
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", updateScreenWidth)
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth)
-    }
-  }, [screenWidth])
   const handleSocialMediaAddition = () => {
     const socialMediaAddition = {
       title: socialMediaTitle,
