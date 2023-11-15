@@ -2,35 +2,35 @@ import { GeneralComponents } from "../../../features/general"
 
 export const GeneralRoutes = [
   {
-    path: "/",
+    path: "",
     component: GeneralComponents.Home,
   },
   {
-    path: "/listing-with-map",
+    path: "listing-with-map",
     component: GeneralComponents.VendorListings.ListingWithMap,
   },
   {
-    path: "/listing-singular",
+    path: "listing-singular",
     component: GeneralComponents.VendorListings.ListingSingular,
   },
   {
-    path: "/vendors",
+    path: "vendors",
     component: GeneralComponents.Vendors,
   },
   {
-    path: "/contact-us",
+    path: "contact-us",
     component: GeneralComponents.Contact,
   },
   {
-    path: "/login",
+    path: "login",
     component: GeneralComponents.Login,
   },
   {
-    path: "/customer-signup",
+    path: "customer-signup",
     component: GeneralComponents.CustomerSignUp,
   },
   {
-    path: "/vendor-signup",
+    path: "vendor-signup",
     component: GeneralComponents.VendorSignUp,
   },
 ]

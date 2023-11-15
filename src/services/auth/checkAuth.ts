@@ -7,5 +7,5 @@ export const checkAuth = (): boolean => {
       return false
     }
   }
-  return true
+  return false
 }

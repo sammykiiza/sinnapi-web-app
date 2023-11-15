@@ -1,6 +1,6 @@
 import MainLayout from "../../main/MainLayout"
 
 export const indexRoute = {
-  path: "",
+  path: "/",
   component: MainLayout,
 }

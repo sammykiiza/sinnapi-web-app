@@ -10,7 +10,7 @@ function VendorSignUp() {
   const handleSignUp = () => {
     localStorage.setItem("loggedIn", "true")
     localStorage.setItem("userType", "vendor")
-    navigate("/vendor")
+    navigate("/vendor/profile")
   }
   return (
     <div className="grid grid-rows-[repeat(auto-fill,minmax(300px,1fr))]">

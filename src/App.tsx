@@ -16,52 +16,56 @@ export default function App() {
   const userType = userTypeLocaStorage ? userTypeLocaStorage : "customer"
   return (
     <Routes>
-      <Route path={GeneralRoutes[0].path} element={<indexRoute.component />}>
+      <Route path={indexRoute.path} element={<indexRoute.component />}>
         {GeneralRoutes.map((route, key) => (
           <Route
-            index={route.path === "/" ? true : false}
+            index={route.path === "" ? true : false}
             path={route.path}
             element={<route.component />}
             key={key}
           />
         ))}
       </Route>
-      {userType === "customer" && checkAuth() ? (
+      {userType === "customer" && checkAuth() === true ? (
         <Route
-          path={CustomerRoutes[0].path}
+          path={indexRouteCustomer.path}
           element={<indexRouteCustomer.component />}
         >
           {CustomerRoutes.map((route, key) => (
             <Route
-              index={route.path === "/customer" ? true : false}
+              index={route.path === "customer" ? true : false}
               path={route.path}
               element={<route.component />}
               key={key}
             />
           ))}
         </Route>
-      ) : (
+      ) : checkAuth() === false ? (
         <Route
           path="/customer/*"
           element={<Navigate to={"/login"} replace />}
         />
+      ) : (
+        <></>
       )}
-      {userType === "vendor" && checkAuth() ? (
+      {userType === "vendor" && checkAuth() === true ? (
         <Route
-          path={VendorRoutes[0].path}
+          path={indexRouteVendor.path}
           element={<indexRouteVendor.component />}
         >
           {VendorRoutes.map((route, key) => (
             <Route
-              index={route.path === "/vendor" ? true : false}
+              index={route.path === "vendor" ? true : false}
               path={route.path}
               element={<route.component />}
               key={key}
             />
           ))}
         </Route>
-      ) : (
+      ) : checkAuth() === false ? (
         <Route path="/vendor/*" element={<Navigate to={"/login"} replace />} />
+      ) : (
+        <></>
       )}
 
       <Route path="*" element={<NoMatch />} />

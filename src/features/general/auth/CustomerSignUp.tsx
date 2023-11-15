@@ -6,7 +6,7 @@ function CustomerSignUp() {
   const handleSignUp = () => {
     localStorage.setItem("loggedIn", "true")
     localStorage.setItem("userType", "customer")
-    navigate("/customer")
+    navigate("/customer/profile")
   }
   return (
     <div className="grid grid-rows-[repeat(auto-fill,minmax(300px,1fr))]">
