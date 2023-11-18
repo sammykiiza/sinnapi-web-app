@@ -43,3 +43,35 @@ export type ListingStatus =
   | "Draft"
   | "Awaiting Approval"
   | "Removed"
+
+export type LoginResponse = string[]
+
+export interface LoginData {
+  email: string
+  password: string
+}
+
+export interface BusinessProfileUpdate {
+  businessId: number
+  businessName: string | null | undefined
+  businessDescription: string | null | undefined
+  businesssWebsite: string | null | undefined
+  latitude: number | null | undefined
+  longitude: number | null | undefined
+  businessVideo: string | null | undefined
+  brandImage: string | null | undefined
+  profileImage: string | null | undefined
+  galleryImages: string | string[] | null | undefined
+}
+
+export interface VendorRegisterData {
+  email: string
+  fullName: string
+  phoneNumber: string
+  password: string
+  businessName: string
+  categoryName: string
+  address: string
+  nationalId: File | null
+  certificateOfIncorporation: File | null
+}

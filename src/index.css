@@ -4,6 +4,9 @@
 .select-categories__control {
   @apply rounded-r-none !important;
 }
+/* .select-categories-vendor-signup__control {
+  @apply w-full !important;
+} */
 .select-categories-vendor-signup__control, .select-district__control, .select-listing__control, .select-vendor-manager__control, .select-sorting__control {
   @apply bg-gray-100 border-gray-300 rounded !important; 
 }
@@ -121,6 +124,7 @@ ul.pagination>li.selected {
     theme(colors.white) 100%
   );
 }
+
 
 div.tox-promotion {
   display: none !important;

@@ -130,6 +130,8 @@ export const selectBoxCategories = [
   { value: "decoration", label: "Decoration" },
 ]
 
+export const customSelectOptions = ["Cakes", "Photography", "Wedding Gowns"]
+
 export const listingsData: ListingsData[] = [
   {
     imageUrl: "/images/vendor/listings/listing-1.jpg",
